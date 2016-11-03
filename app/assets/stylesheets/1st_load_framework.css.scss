@@ -1,6 +1,7 @@
 // import the CSS framework
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "overview.css.scss";
 
 // make all images responsive by default
 img {
@@ -36,7 +37,9 @@ img {
 main {
   @extend .container;
   background-color: #eee;
-  padding-bottom: 80px;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+  //padding-bottom: 80px;
   width: 100%;
   margin-top: 51px; // accommodate the navbar
   }
@@ -75,8 +78,18 @@ section {
 #error_explanation h2 {
   font-size: 16px;
 }
+
 .button-xs {
   @extend .btn;
   @extend .btn-primary;
   @extend .btn-xs;
+}
+
+.overview-image {
+  background-image: url('home-ease-overview.jpg');
+  min-height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
