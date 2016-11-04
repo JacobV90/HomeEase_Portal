@@ -1,0 +1,41 @@
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+<% if current_page?(profile_index_path) %>
+<div class = 'col-md-4' >
+<div class="nav-side-menu side-nav">
+    <div class="brand">Brand Logo</div>
+    <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+  
+        <div class="menu-list">
+  
+            <ul id="menu-content" class="menu-content collapse out">
+                
+                <li>
+                    <a href="profile/dashboard">
+                        <li class = "active">
+                            <i class="fa fa-dashboard fa-lg"></i> Dashboard
+                        </li>
+                    </a>
+                </li>
+
+                <li data-toggle="collapse" data-target="#products" class="collapsed">
+                  <a href="/bank"><i class="fa fa-gift fa-lg"></i>Bank Information <span class="arrow"></span></a>
+                </li>
+                
+                <li data-toggle="collapse" data-target="#service" class="collapsed">
+                  <a href="#"><i class="fa fa-globe fa-lg"></i>Properties<span class="arrow"></span></a>
+                </li>  
+                
+                <li data-toggle="collapse" data-target="#new" class="collapsed">
+                  <a href="#"><i class="fa fa-car fa-lg"></i> Account Settings <span class="arrow"></span></a>
+                </li>
+        
+            </ul>
+     </div>
+</div>
+</div>
+
+<% end %>
+
+
+ 

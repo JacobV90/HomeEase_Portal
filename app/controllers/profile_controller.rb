@@ -5,15 +5,23 @@ class ProfileController < ApplicationController
    end
 
    def show
-      
    end
-
+       
    def create
      
    end
    
    def index
-       
+       #render "dashboard"
    end
-
+   
+   def dashboard
+       puts "like wtf"
+       render "_dashboard"
+   end
+   
+    def bank
+        render "bank"
+    end
+   
 end
