@@ -1,4 +1,4 @@
-class PropertiesController < ApplicationController
+class PropertiesController < ProfileController
   before_action :authenticate_user!
 
    def new
@@ -14,7 +14,9 @@ class PropertiesController < ApplicationController
    end
    
    def index
-       
+      render "index"
    end
+   
+
 
 end
