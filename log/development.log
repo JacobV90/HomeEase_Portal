@@ -31732,3 +31732,71 @@ Processing by ProfileController#properties as HTML
 Completed 200 OK in 92ms (Views: 89.8ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/" for 10.240.0.204 at 2016-11-06 23:30:16 +0000
+Cannot render console from 10.240.0.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (4.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered layouts/_nav_links_for_auth.html.erb (43.0ms)
+  Rendered layouts/_navigation.html.erb (46.5ms)
+  Rendered layouts/_messages.html.erb (1.9ms)
+Completed 200 OK in 777ms (Views: 754.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/dashboard" for 10.240.0.204 at 2016-11-06 23:30:18 +0000
+Cannot render console from 10.240.0.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProfileController#dashboard as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering profile/dashboard.html.erb within layouts/profile
+  Rendered profile/_profile_widget.html.erb (0.3ms)
+  Rendered profile/dashboard.html.erb within layouts/profile (2.4ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.6ms)
+  Rendered layouts/_navigation.html.erb (2.7ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered profile/_side_menu.html.erb (0.3ms)
+Completed 200 OK in 103ms (Views: 90.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/bank" for 10.240.1.15 at 2016-11-06 23:30:19 +0000
+Cannot render console from 10.240.1.15! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProfileController#bank as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering profile/bank.html.erb within layouts/profile
+  Rendered profile/bank.html.erb within layouts/profile (0.6ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.5ms)
+  Rendered layouts/_navigation.html.erb (2.6ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered profile/_side_menu.html.erb (0.3ms)
+Completed 200 OK in 90ms (Views: 87.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/properties" for 10.240.0.208 at 2016-11-06 23:30:20 +0000
+Cannot render console from 10.240.0.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProfileController#properties as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering profile/properties.html.erb within layouts/profile
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  Rendered profile/properties.html.erb within layouts/profile (7.6ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.6ms)
+  Rendered layouts/_navigation.html.erb (2.6ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+  Rendered profile/_side_menu.html.erb (0.3ms)
+Completed 200 OK in 146ms (Views: 141.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/dashboard" for 10.240.0.204 at 2016-11-06 23:30:21 +0000
+Cannot render console from 10.240.0.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProfileController#dashboard as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering profile/dashboard.html.erb within layouts/profile
+  Rendered profile/_profile_widget.html.erb (0.5ms)
+  Rendered profile/dashboard.html.erb within layouts/profile (2.6ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.5ms)
+  Rendered layouts/_navigation.html.erb (2.4ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered profile/_side_menu.html.erb (0.4ms)
+Completed 200 OK in 124ms (Views: 119.4ms | ActiveRecord: 0.5ms)
+
+
