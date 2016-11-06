@@ -14,7 +14,7 @@ class PropertiesController < ProfileController
    end
    
    def index
-      render "index"
+       @properties = Property.all
    end
    
 

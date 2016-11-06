@@ -1,0 +1,42 @@
+<% content_for :side_content do%>
+<button type="button" class="btn btn-secondary">Add Property</button>
+
+
+<div class="container">
+  <div class="row">
+    <h3>Properties</h3>
+    <div class="column">
+      <table class="table">
+        <tbody>
+          <% (Property.all).each do |property| %>
+            <div id="accordion" role="tablist" aria-multiselectable="true">
+  <div class="card">
+    <div class="card-header" role="tab" id="headingOne">
+      <h5 class="mb-0">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            <tr>
+              <%= property.address %>
+            </tr>
+        </a>
+              <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-secondary">Edit Property</button>
+              <button type="button" class="btn btn-secondary">Remove Property</button>
+              </div>
+      </h5>
+    </div>
+
+    <div id="collapseOne" class="collapse in" role="tabpanel" aria-labelledby="headingOne">
+      <div class="card-block">
+        Property Information 
+      </div>
+    </div>
+  </div>
+  
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<% end %>
