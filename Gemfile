@@ -9,11 +9,16 @@ gem 'jquery-rails'
 gem 'jquery-turbolinks'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
+
+group :production do 
+  gem "pg"
+end
+
 group :development, :test do
+  gem 'sqlite3'
   gem 'byebug', platform: :mri
 end
 group :development do
-  gem 'sqlite3'
   gem 'web-console'
   gem 'listen', '~> 3.0.5'
   gem 'spring'
