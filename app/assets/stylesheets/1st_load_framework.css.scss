@@ -84,12 +84,3 @@ section {
   @extend .btn-primary;
   @extend .btn-xs;
 }
-
-.overview-image {
-  background-image: url('home-ease-overview.jpg');
-  min-height: 100vh;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}

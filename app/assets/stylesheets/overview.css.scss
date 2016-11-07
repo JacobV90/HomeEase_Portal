@@ -1,3 +1,4 @@
+
 .overview-image {
   background-image: image-url('home-ease-overview.jpg');
   min-height: 100vh;
@@ -5,4 +6,19 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  vertical-align: middle;
+}
+
+.overview-image-filter{
+  background-color: rgba(0,0,0,0.5);
+  float:none;
+  margin:0 auto;
+  font-size: 24px;
+  color: #ffffff;
+}
+
+.vcenter {
+    height: 100vh;
+    display: flex;
+    align-items: center;
 }
