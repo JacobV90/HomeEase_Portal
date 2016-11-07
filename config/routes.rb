@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get 'bank', to: 'profile#bank'
   get 'dashboard', to: 'profile#dashboard'
   get 'properties', to: 'profile#properties'
+
   resources :properties
   
 end

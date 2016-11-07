@@ -5,5 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
 user = CreateAdminService.new.call
 puts 'CREATED ADMIN USER: ' << user.email
+example_property = Property.create(address: '666 Fluffy Bunny Way, TooKuhl4School',rent_amount: 2200, number_bedrooms: 3,number_bathrooms: 1)
+puts 'CREATED EXAMPLE PROPERTY: ' << example_property.address
