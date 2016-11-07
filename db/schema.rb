@@ -15,8 +15,8 @@ ActiveRecord::Schema.define(version: 20161107011829) do
   create_table "properties", force: :cascade do |t|
     t.string   "address"
     t.string   "description"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.datetime "created_at",                                                                                                                             null: false
+    t.datetime "updated_at",                                                                                                                             null: false
     t.integer  "rent_amount",      default: 1000
     t.integer  "number_bedrooms",  default: 0
     t.integer  "number_bathrooms", default: 0

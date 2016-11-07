@@ -36082,3 +36082,250 @@ Processing by VisitorsController#index as HTML
 Completed 200 OK in 230ms (Views: 228.9ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 10.240.0.119 at 2016-11-07 19:43:58 +0000
+Cannot render console from 10.240.0.119! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.0.0.1) lib/active_record/migration.rb:572:in `check_pending!'
+activerecord (5.0.0.1) lib/active_record/migration.rb:548:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+better_errors (2.1.1) lib/better_errors/middleware.rb:59:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.8ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (63.1ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddInformationToProperties (20161107011829)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.9ms)[0m  [1m[35mALTER TABLE "properties" ADD "rent_amount" integer DEFAULT 1000[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "properties" ADD "number_bedrooms" integer DEFAULT 0[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "properties" ADD "number_bathrooms" integer DEFAULT 0[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "properties" ADD "amenities" varchar DEFAULT 'You can list notable things about your property here, such as if pets are allowed or parking is available'[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161107011829"]]
+  [1m[35m (12.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "user@example.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (17.5ms)[0m  [1m[32mINSERT INTO "properties" ("address", "created_at", "updated_at", "rent_amount", "number_bedrooms", "number_bathrooms") VALUES (?, ?, ?, ?, ?, ?)[0m  [["address", "666 Fluffy Bunny Way, TooKuhl4School"], ["created_at", 2016-11-07 19:44:33 UTC], ["updated_at", 2016-11-07 19:44:33 UTC], ["rent_amount", 2200], ["number_bedrooms", 3], ["number_bathrooms", 1]]
+  [1m[35m (11.1ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for 10.240.0.110 at 2016-11-07 19:44:51 +0000
+Cannot render console from 10.240.0.110! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (4.2ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (4.9ms)
+  Rendered layouts/_navigation.html.erb (8.0ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+Completed 200 OK in 593ms (Views: 573.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 10.240.1.60 at 2016-11-07 19:44:55 +0000
+Cannot render console from 10.240.1.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (778.3ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.9ms)
+  Rendered layouts/_navigation.html.erb (3.6ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+Completed 200 OK in 954ms (Views: 918.6ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/users/sign_in" for 10.240.0.208 at 2016-11-07 19:44:57 +0000
+Cannot render console from 10.240.0.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/XU2T19taEN4QMjbrkX471kQIHD7Jd3/x7xBRRzsDhEM7/kkisyvHkIqbnhn7BcGp+OwptF4Pd0XLm6TQtPheg==", "user"=>{"email"=>"jacobveal90@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "jacobveal90@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.8ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2016-11-07 19:44:58 UTC], ["last_sign_in_at", 2016-11-07 14:48:29 UTC], ["current_sign_in_ip", "10.240.0.208"], ["last_sign_in_ip", "10.240.0.207"], ["sign_in_count", 3], ["updated_at", 2016-11-07 19:44:58 UTC], ["id", 2]]
+  [1m[35m (12.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://selt-project-jacobv90.c9users.io:8080/
+Completed 302 Found in 298ms (ActiveRecord: 14.4ms)
+
+
+Started GET "/" for 10.240.0.182 at 2016-11-07 19:44:58 +0000
+Cannot render console from 10.240.0.182! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_nav_links_for_auth.html.erb (2.5ms)
+  Rendered layouts/_navigation.html.erb (4.4ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+Completed 200 OK in 110ms (Views: 107.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/dashboard" for 10.240.0.187 at 2016-11-07 19:45:10 +0000
+Cannot render console from 10.240.0.187! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProfileController#dashboard as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering profile/dashboard.html.erb within layouts/profile
+  Rendered profile/_profile_widget.html.erb (1.3ms)
+  Rendered profile/dashboard.html.erb within layouts/profile (144.4ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.5ms)
+  Rendered layouts/_navigation.html.erb (2.4ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+  Rendered profile/_side_menu.html.erb (0.3ms)
+Completed 200 OK in 228ms (Views: 222.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/properties" for 10.240.1.15 at 2016-11-07 19:45:12 +0000
+Cannot render console from 10.240.1.15! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProfileController#properties as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering profile/properties.html.erb within layouts/profile
+  [1m[36mProperty Load (0.4ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  Rendered profile/properties.html.erb within layouts/profile (16.4ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.6ms)
+  Rendered layouts/_navigation.html.erb (2.6ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+  Rendered profile/_side_menu.html.erb (0.4ms)
+Completed 200 OK in 136ms (Views: 99.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/dashboard" for 10.240.1.17 at 2016-11-07 19:45:18 +0000
+Cannot render console from 10.240.1.17! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProfileController#dashboard as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering profile/dashboard.html.erb within layouts/profile
+  Rendered profile/_profile_widget.html.erb (0.4ms)
+  Rendered profile/dashboard.html.erb within layouts/profile (1.8ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.5ms)
+  Rendered layouts/_navigation.html.erb (2.3ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered profile/_side_menu.html.erb (0.3ms)
+Completed 200 OK in 198ms (Views: 193.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/dashboard" for 10.240.1.60 at 2016-11-07 19:45:19 +0000
+Cannot render console from 10.240.1.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProfileController#dashboard as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering profile/dashboard.html.erb within layouts/profile
+  Rendered profile/_profile_widget.html.erb (0.5ms)
+  Rendered profile/dashboard.html.erb within layouts/profile (2.7ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.6ms)
+  Rendered layouts/_navigation.html.erb (3.0ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+  Rendered profile/_side_menu.html.erb (0.3ms)
+Completed 200 OK in 95ms (Views: 90.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/bank" for 10.240.0.187 at 2016-11-07 19:45:19 +0000
+Cannot render console from 10.240.0.187! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProfileController#bank as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering profile/bank.html.erb within layouts/profile
+  Rendered profile/bank.html.erb within layouts/profile (2.3ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.5ms)
+  Rendered layouts/_navigation.html.erb (2.4ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered profile/_side_menu.html.erb (0.5ms)
+Completed 200 OK in 137ms (Views: 134.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/properties" for 10.240.0.207 at 2016-11-07 19:45:21 +0000
+Cannot render console from 10.240.0.207! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProfileController#properties as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering profile/properties.html.erb within layouts/profile
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  Rendered profile/properties.html.erb within layouts/profile (2.1ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.9ms)
+  Rendered layouts/_navigation.html.erb (3.3ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+  Rendered profile/_side_menu.html.erb (0.5ms)
+Completed 200 OK in 240ms (Views: 236.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/bank" for 10.240.0.207 at 2016-11-07 19:45:24 +0000
+Cannot render console from 10.240.0.207! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProfileController#bank as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering profile/bank.html.erb within layouts/profile
+  Rendered profile/bank.html.erb within layouts/profile (1.2ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.5ms)
+  Rendered layouts/_navigation.html.erb (2.3ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered profile/_side_menu.html.erb (0.4ms)
+Completed 200 OK in 92ms (Views: 88.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/dashboard" for 10.240.0.207 at 2016-11-07 19:45:25 +0000
+Cannot render console from 10.240.0.207! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProfileController#dashboard as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering profile/dashboard.html.erb within layouts/profile
+  Rendered profile/_profile_widget.html.erb (0.6ms)
+  Rendered profile/dashboard.html.erb within layouts/profile (2.9ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.5ms)
+  Rendered layouts/_navigation.html.erb (2.8ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered profile/_side_menu.html.erb (0.3ms)
+Completed 200 OK in 114ms (Views: 109.8ms | ActiveRecord: 0.4ms)
+
+
