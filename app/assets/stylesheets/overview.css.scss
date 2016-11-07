@@ -9,14 +9,20 @@
   vertical-align: middle;
 }
 
-.overview-image-filter{
-  background-color: rgba(0,0,0,0.5);
+.overview-content{
+  background-color: rgba(0,0,0,0.7);
   float:none;
   margin:0 auto;
   font-size: 24px;
   color: #ffffff;
+  width: 100%;
+  width: 100vw;
+  margin-right: 60vh;
+  p{
+    text-align: right;
+  }
 }
-
+ 
 .vcenter {
     height: 100vh;
     display: flex;

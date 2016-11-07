@@ -32749,3 +32749,730 @@ Processing by VisitorsController#index as HTML
 Completed 200 OK in 89ms (Views: 87.7ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/" for 10.240.0.110 at 2016-11-07 14:20:57 +0000
+Cannot render console from 10.240.0.110! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (3.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_nav_links_for_auth.html.erb (31.2ms)
+  Rendered layouts/_navigation.html.erb (34.4ms)
+  Rendered layouts/_messages.html.erb (1.0ms)
+Completed 200 OK in 584ms (Views: 563.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 10.240.0.110 at 2016-11-07 14:23:11 +0000
+Cannot render console from 10.240.0.110! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (1.2ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/ubuntu/workspace/HomeEase_Portal/app/assets/stylesheets/overview.css.scss to /home/ubuntu/workspace/HomeEase_Portal/app/assets/stylesheets/overview.scss. (called from _app_views_layouts_application_html_erb___3064462129330370023_70014082379440 at /home/ubuntu/workspace/HomeEase_Portal/app/views/layouts/application.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/ubuntu/workspace/HomeEase_Portal/app/assets/stylesheets/overview.css.scss to /home/ubuntu/workspace/HomeEase_Portal/app/assets/stylesheets/overview.scss. (called from _app_views_layouts_application_html_erb___3064462129330370023_70014082379440 at /home/ubuntu/workspace/HomeEase_Portal/app/views/layouts/application.html.erb:7)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_nav_links_for_auth.html.erb (2.8ms)
+  Rendered layouts/_navigation.html.erb (4.8ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+Completed 200 OK in 2377ms (Views: 2373.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 10.240.1.15 at 2016-11-07 14:24:33 +0000
+Cannot render console from 10.240.1.15! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (0.9ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/ubuntu/workspace/HomeEase_Portal/app/assets/stylesheets/overview.css.scss to /home/ubuntu/workspace/HomeEase_Portal/app/assets/stylesheets/overview.scss. (called from _app_views_layouts_application_html_erb___3064462129330370023_70014090113860 at /home/ubuntu/workspace/HomeEase_Portal/app/views/layouts/application.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/ubuntu/workspace/HomeEase_Portal/app/assets/stylesheets/overview.css.scss to /home/ubuntu/workspace/HomeEase_Portal/app/assets/stylesheets/overview.scss. (called from _app_views_layouts_application_html_erb___3064462129330370023_70014090113860 at /home/ubuntu/workspace/HomeEase_Portal/app/views/layouts/application.html.erb:7)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_nav_links_for_auth.html.erb (3.1ms)
+  Rendered layouts/_navigation.html.erb (6.2ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+Completed 200 OK in 3755ms (Views: 3752.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 10.240.0.207 at 2016-11-07 14:24:47 +0000
+Cannot render console from 10.240.0.207! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (0.4ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/ubuntu/workspace/HomeEase_Portal/app/assets/stylesheets/overview.css.scss to /home/ubuntu/workspace/HomeEase_Portal/app/assets/stylesheets/overview.scss. (called from _app_views_layouts_application_html_erb___3064462129330370023_70014086565220 at /home/ubuntu/workspace/HomeEase_Portal/app/views/layouts/application.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/ubuntu/workspace/HomeEase_Portal/app/assets/stylesheets/overview.css.scss to /home/ubuntu/workspace/HomeEase_Portal/app/assets/stylesheets/overview.scss. (called from _app_views_layouts_application_html_erb___3064462129330370023_70014086565220 at /home/ubuntu/workspace/HomeEase_Portal/app/views/layouts/application.html.erb:7)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_nav_links_for_auth.html.erb (4.2ms)
+  Rendered layouts/_navigation.html.erb (8.0ms)
+  Rendered layouts/_messages.html.erb (1.1ms)
+Completed 200 OK in 2670ms (Views: 2668.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 10.240.1.32 at 2016-11-07 14:25:27 +0000
+Cannot render console from 10.240.1.32! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_nav_links_for_auth.html.erb (2.2ms)
+  Rendered layouts/_navigation.html.erb (4.5ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+Completed 200 OK in 103ms (Views: 101.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 10.240.0.187 at 2016-11-07 14:25:49 +0000
+Cannot render console from 10.240.0.187! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_nav_links_for_auth.html.erb (3.3ms)
+  Rendered layouts/_navigation.html.erb (6.1ms)
+  Rendered layouts/_messages.html.erb (1.0ms)
+Completed 200 OK in 164ms (Views: 160.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 10.240.1.32 at 2016-11-07 14:27:40 +0000
+Cannot render console from 10.240.1.32! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (0.4ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/ubuntu/workspace/HomeEase_Portal/app/assets/stylesheets/overview.css.scss to /home/ubuntu/workspace/HomeEase_Portal/app/assets/stylesheets/overview.scss. (called from _app_views_layouts_application_html_erb___3064462129330370023_70014054330840 at /home/ubuntu/workspace/HomeEase_Portal/app/views/layouts/application.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/ubuntu/workspace/HomeEase_Portal/app/assets/stylesheets/overview.css.scss to /home/ubuntu/workspace/HomeEase_Portal/app/assets/stylesheets/overview.scss. (called from _app_views_layouts_application_html_erb___3064462129330370023_70014054330840 at /home/ubuntu/workspace/HomeEase_Portal/app/views/layouts/application.html.erb:7)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_nav_links_for_auth.html.erb (2.2ms)
+  Rendered layouts/_navigation.html.erb (4.0ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 2058ms (Views: 2056.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 10.240.0.182 at 2016-11-07 14:28:26 +0000
+Cannot render console from 10.240.0.182! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_nav_links_for_auth.html.erb (2.4ms)
+  Rendered layouts/_navigation.html.erb (4.3ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 143ms (Views: 141.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 10.240.1.60 at 2016-11-07 14:28:27 +0000
+Cannot render console from 10.240.1.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_nav_links_for_auth.html.erb (2.3ms)
+  Rendered layouts/_navigation.html.erb (4.4ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 192ms (Views: 190.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 10.240.1.60 at 2016-11-07 14:28:33 +0000
+Cannot render console from 10.240.1.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_nav_links_for_auth.html.erb (2.3ms)
+  Rendered layouts/_navigation.html.erb (4.8ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+Completed 200 OK in 92ms (Views: 90.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/dashboard" for 10.240.0.187 at 2016-11-07 14:31:03 +0000
+Cannot render console from 10.240.0.187! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProfileController#dashboard as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering profile/dashboard.html.erb within layouts/profile
+  Rendered profile/_profile_widget.html.erb (0.9ms)
+  Rendered profile/dashboard.html.erb within layouts/profile (8.4ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.9ms)
+  Rendered layouts/_navigation.html.erb (4.5ms)
+  Rendered layouts/_messages.html.erb (0.9ms)
+  Rendered profile/_side_menu.html.erb (0.7ms)
+Completed 200 OK in 201ms (Views: 151.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/properties" for 10.240.0.186 at 2016-11-07 14:31:07 +0000
+Cannot render console from 10.240.0.186! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProfileController#properties as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering profile/properties.html.erb within layouts/profile
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  Rendered profile/properties.html.erb within layouts/profile (2.8ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.5ms)
+  Rendered layouts/_navigation.html.erb (2.7ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered profile/_side_menu.html.erb (0.3ms)
+Completed 200 OK in 130ms (Views: 125.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/bank" for 10.240.1.17 at 2016-11-07 14:31:09 +0000
+Cannot render console from 10.240.1.17! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProfileController#bank as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering profile/bank.html.erb within layouts/profile
+  Rendered profile/bank.html.erb within layouts/profile (0.8ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.1ms)
+  Rendered layouts/_navigation.html.erb (4.6ms)
+  Rendered layouts/_messages.html.erb (1.1ms)
+  Rendered profile/_side_menu.html.erb (0.8ms)
+Completed 200 OK in 243ms (Views: 239.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/dashboard" for 10.240.0.119 at 2016-11-07 14:31:10 +0000
+Cannot render console from 10.240.0.119! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProfileController#dashboard as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering profile/dashboard.html.erb within layouts/profile
+  Rendered profile/_profile_widget.html.erb (0.4ms)
+  Rendered profile/dashboard.html.erb within layouts/profile (2.6ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.7ms)
+  Rendered layouts/_navigation.html.erb (2.9ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+  Rendered profile/_side_menu.html.erb (0.3ms)
+Completed 200 OK in 130ms (Views: 124.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 10.240.0.119 at 2016-11-07 14:31:13 +0000
+Cannot render console from 10.240.0.119! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_nav_links_for_auth.html.erb (2.1ms)
+  Rendered layouts/_navigation.html.erb (33.8ms)
+  Rendered layouts/_messages.html.erb (1.1ms)
+Completed 200 OK in 131ms (Views: 128.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/dashboard" for 10.240.1.20 at 2016-11-07 14:33:27 +0000
+Cannot render console from 10.240.1.20! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProfileController#dashboard as HTML
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering profile/dashboard.html.erb within layouts/profile
+  Rendered profile/_profile_widget.html.erb (0.6ms)
+  Rendered profile/dashboard.html.erb within layouts/profile (2.8ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.7ms)
+  Rendered layouts/_navigation.html.erb (3.2ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+  Rendered profile/_side_menu.html.erb (0.3ms)
+Completed 200 OK in 148ms (Views: 143.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/dashboard" for 10.240.1.20 at 2016-11-07 14:33:28 +0000
+Cannot render console from 10.240.1.20! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProfileController#dashboard as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering profile/dashboard.html.erb within layouts/profile
+  Rendered profile/_profile_widget.html.erb (0.6ms)
+  Rendered profile/dashboard.html.erb within layouts/profile (2.1ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.5ms)
+  Rendered layouts/_navigation.html.erb (2.7ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered profile/_side_menu.html.erb (0.4ms)
+Completed 200 OK in 118ms (Views: 113.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/dashboard" for 10.240.0.208 at 2016-11-07 14:33:29 +0000
+Cannot render console from 10.240.0.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProfileController#dashboard as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering profile/dashboard.html.erb within layouts/profile
+  Rendered profile/_profile_widget.html.erb (0.4ms)
+  Rendered profile/dashboard.html.erb within layouts/profile (2.6ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.8ms)
+  Rendered layouts/_navigation.html.erb (3.0ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered profile/_side_menu.html.erb (0.5ms)
+Completed 200 OK in 106ms (Views: 101.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/bank" for 10.240.1.32 at 2016-11-07 14:33:30 +0000
+Cannot render console from 10.240.1.32! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProfileController#bank as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering profile/bank.html.erb within layouts/profile
+  Rendered profile/bank.html.erb within layouts/profile (0.7ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.6ms)
+  Rendered layouts/_navigation.html.erb (2.6ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered profile/_side_menu.html.erb (0.4ms)
+Completed 200 OK in 94ms (Views: 91.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/properties" for 10.240.1.17 at 2016-11-07 14:33:30 +0000
+Cannot render console from 10.240.1.17! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProfileController#properties as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering profile/properties.html.erb within layouts/profile
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  Rendered profile/properties.html.erb within layouts/profile (2.0ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.7ms)
+  Rendered layouts/_navigation.html.erb (3.9ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered profile/_side_menu.html.erb (0.5ms)
+Completed 200 OK in 106ms (Views: 101.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/dashboard" for 10.240.0.206 at 2016-11-07 14:33:32 +0000
+Cannot render console from 10.240.0.206! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProfileController#dashboard as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering profile/dashboard.html.erb within layouts/profile
+  Rendered profile/_profile_widget.html.erb (0.3ms)
+  Rendered profile/dashboard.html.erb within layouts/profile (1.8ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.5ms)
+  Rendered layouts/_navigation.html.erb (2.3ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+  Rendered profile/_side_menu.html.erb (0.3ms)
+Completed 200 OK in 132ms (Views: 129.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/dashboard" for 10.240.0.241 at 2016-11-07 14:33:33 +0000
+Cannot render console from 10.240.0.241! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProfileController#dashboard as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering profile/dashboard.html.erb within layouts/profile
+  Rendered profile/_profile_widget.html.erb (0.3ms)
+  Rendered profile/dashboard.html.erb within layouts/profile (1.7ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.5ms)
+  Rendered layouts/_navigation.html.erb (2.5ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered profile/_side_menu.html.erb (0.3ms)
+Completed 200 OK in 78ms (Views: 75.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 10.240.0.208 at 2016-11-07 14:33:34 +0000
+Cannot render console from 10.240.0.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_nav_links_for_auth.html.erb (2.3ms)
+  Rendered layouts/_navigation.html.erb (4.1ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 80ms (Views: 77.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 10.240.0.179 at 2016-11-07 14:34:58 +0000
+Cannot render console from 10.240.0.179! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (0.6ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/ubuntu/workspace/HomeEase_Portal/app/assets/stylesheets/overview.css.scss to /home/ubuntu/workspace/HomeEase_Portal/app/assets/stylesheets/overview.scss. (called from _app_views_layouts_application_html_erb___3064462129330370023_70014050870420 at /home/ubuntu/workspace/HomeEase_Portal/app/views/layouts/application.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/ubuntu/workspace/HomeEase_Portal/app/assets/stylesheets/overview.css.scss to /home/ubuntu/workspace/HomeEase_Portal/app/assets/stylesheets/overview.scss. (called from _app_views_layouts_application_html_erb___3064462129330370023_70014050870420 at /home/ubuntu/workspace/HomeEase_Portal/app/views/layouts/application.html.erb:7)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_nav_links_for_auth.html.erb (2.0ms)
+  Rendered layouts/_navigation.html.erb (3.8ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 2233ms (Views: 2231.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 10.240.1.32 at 2016-11-07 14:38:19 +0000
+Cannot render console from 10.240.1.32! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (0.6ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/ubuntu/workspace/HomeEase_Portal/app/assets/stylesheets/overview.css.scss to /home/ubuntu/workspace/HomeEase_Portal/app/assets/stylesheets/overview.scss. (called from _app_views_layouts_application_html_erb___3064462129330370023_70014057975260 at /home/ubuntu/workspace/HomeEase_Portal/app/views/layouts/application.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/ubuntu/workspace/HomeEase_Portal/app/assets/stylesheets/overview.css.scss to /home/ubuntu/workspace/HomeEase_Portal/app/assets/stylesheets/overview.scss. (called from _app_views_layouts_application_html_erb___3064462129330370023_70014057975260 at /home/ubuntu/workspace/HomeEase_Portal/app/views/layouts/application.html.erb:7)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_nav_links_for_auth.html.erb (2.1ms)
+  Rendered layouts/_navigation.html.erb (3.9ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 2558ms (Views: 2555.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 10.240.0.241 at 2016-11-07 14:44:02 +0000
+Cannot render console from 10.240.0.241! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_nav_links_for_auth.html.erb (2.1ms)
+  Rendered layouts/_navigation.html.erb (27.2ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+Completed 200 OK in 108ms (Views: 105.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 10.240.0.179 at 2016-11-07 14:45:04 +0000
+Cannot render console from 10.240.0.179! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_nav_links_for_auth.html.erb (3.0ms)
+  Rendered layouts/_navigation.html.erb (5.7ms)
+  Rendered layouts/_messages.html.erb (0.9ms)
+Completed 200 OK in 145ms (Views: 142.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 10.240.1.15 at 2016-11-07 14:45:21 +0000
+Cannot render console from 10.240.1.15! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_nav_links_for_auth.html.erb (2.1ms)
+  Rendered layouts/_navigation.html.erb (4.2ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+Completed 200 OK in 89ms (Views: 87.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/dashboard" for 10.240.1.60 at 2016-11-07 14:45:38 +0000
+Cannot render console from 10.240.1.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProfileController#dashboard as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering profile/dashboard.html.erb within layouts/profile
+  Rendered profile/_profile_widget.html.erb (0.3ms)
+  Rendered profile/dashboard.html.erb within layouts/profile (1.9ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.6ms)
+  Rendered layouts/_navigation.html.erb (2.5ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered profile/_side_menu.html.erb (0.3ms)
+Completed 200 OK in 183ms (Views: 179.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for 10.240.0.187 at 2016-11-07 14:45:39 +0000
+Cannot render console from 10.240.0.187! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/_user.html.erb (17.0ms)
+  Rendered users/index.html.erb within layouts/application (20.3ms)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `address' for #<User:0x007f5ad629c6a0>):
+    1: <td><%= link_to user.address, user %></td>
+    2: <td><%= link_to user.description, user %></td>
+  
+app/views/users/_user.html.erb:1:in `_app_views_users__user_html_erb__2702702285649797916_70014057956540'
+app/views/users/index.html.erb:9:in `block in _app_views_users_index_html_erb___4428784754245294401_70014052661620'
+app/views/users/index.html.erb:7:in `_app_views_users_index_html_erb___4428784754245294401_70014052661620'
+  Rendering /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.9ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (53.7ms)
+Started GET "/dashboard" for 10.240.0.187 at 2016-11-07 14:45:44 +0000
+Cannot render console from 10.240.0.187! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProfileController#dashboard as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering profile/dashboard.html.erb within layouts/profile
+  Rendered profile/_profile_widget.html.erb (0.3ms)
+  Rendered profile/dashboard.html.erb within layouts/profile (2.3ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.6ms)
+  Rendered layouts/_navigation.html.erb (2.6ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered profile/_side_menu.html.erb (0.3ms)
+Completed 200 OK in 92ms (Views: 87.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 10.240.0.186 at 2016-11-07 14:45:44 +0000
+Cannot render console from 10.240.0.186! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_nav_links_for_auth.html.erb (2.6ms)
+  Rendered layouts/_navigation.html.erb (5.2ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 178ms (Views: 175.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/dashboard" for 10.240.0.206 at 2016-11-07 14:45:45 +0000
+Cannot render console from 10.240.0.206! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProfileController#dashboard as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering profile/dashboard.html.erb within layouts/profile
+  Rendered profile/_profile_widget.html.erb (0.3ms)
+  Rendered profile/dashboard.html.erb within layouts/profile (2.0ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.6ms)
+  Rendered layouts/_navigation.html.erb (2.8ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+  Rendered profile/_side_menu.html.erb (0.4ms)
+Completed 200 OK in 128ms (Views: 124.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/dashboard" for 10.240.0.119 at 2016-11-07 14:45:46 +0000
+Cannot render console from 10.240.0.119! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProfileController#dashboard as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering profile/dashboard.html.erb within layouts/profile
+  Rendered profile/_profile_widget.html.erb (0.3ms)
+  Rendered profile/dashboard.html.erb within layouts/profile (1.9ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.6ms)
+  Rendered layouts/_navigation.html.erb (2.6ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+  Rendered profile/_side_menu.html.erb (0.3ms)
+Completed 200 OK in 90ms (Views: 86.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/dashboard" for 10.240.0.119 at 2016-11-07 14:45:47 +0000
+Cannot render console from 10.240.0.119! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProfileController#dashboard as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering profile/dashboard.html.erb within layouts/profile
+  Rendered profile/_profile_widget.html.erb (0.3ms)
+  Rendered profile/dashboard.html.erb within layouts/profile (2.0ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.6ms)
+  Rendered layouts/_navigation.html.erb (2.7ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered profile/_side_menu.html.erb (0.4ms)
+Completed 200 OK in 93ms (Views: 89.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 10.240.0.186 at 2016-11-07 14:45:48 +0000
+Cannot render console from 10.240.0.186! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_nav_links_for_auth.html.erb (2.0ms)
+  Rendered layouts/_navigation.html.erb (3.9ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+Completed 200 OK in 88ms (Views: 86.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/dashboard" for 10.240.1.60 at 2016-11-07 14:45:55 +0000
+Cannot render console from 10.240.1.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProfileController#dashboard as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering profile/dashboard.html.erb within layouts/profile
+  Rendered profile/_profile_widget.html.erb (0.3ms)
+  Rendered profile/dashboard.html.erb within layouts/profile (1.9ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.9ms)
+  Rendered layouts/_navigation.html.erb (4.0ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+  Rendered profile/_side_menu.html.erb (0.3ms)
+Completed 200 OK in 92ms (Views: 87.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/dashboard" for 10.240.0.119 at 2016-11-07 14:47:26 +0000
+Cannot render console from 10.240.0.119! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProfileController#dashboard as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering profile/dashboard.html.erb within layouts/profile
+  Rendered profile/_profile_widget.html.erb (0.6ms)
+  Rendered profile/dashboard.html.erb within layouts/profile (2.8ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.8ms)
+  Rendered layouts/_navigation.html.erb (3.1ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+  Rendered profile/_side_menu.html.erb (0.3ms)
+Completed 200 OK in 248ms (Views: 244.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/dashboard" for 10.240.0.182 at 2016-11-07 14:47:29 +0000
+Cannot render console from 10.240.0.182! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProfileController#dashboard as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering profile/dashboard.html.erb within layouts/profile
+  Rendered profile/_profile_widget.html.erb (0.4ms)
+  Rendered profile/dashboard.html.erb within layouts/profile (2.0ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.9ms)
+  Rendered layouts/_navigation.html.erb (4.0ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+  Rendered profile/_side_menu.html.erb (0.6ms)
+Completed 200 OK in 236ms (Views: 232.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/dashboard" for 10.240.0.119 at 2016-11-07 14:47:31 +0000
+Cannot render console from 10.240.0.119! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProfileController#dashboard as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering profile/dashboard.html.erb within layouts/profile
+  Rendered profile/_profile_widget.html.erb (0.4ms)
+  Rendered profile/dashboard.html.erb within layouts/profile (1.9ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.5ms)
+  Rendered layouts/_navigation.html.erb (3.0ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+  Rendered profile/_side_menu.html.erb (0.3ms)
+Completed 200 OK in 206ms (Views: 202.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 10.240.0.208 at 2016-11-07 14:47:32 +0000
+Cannot render console from 10.240.0.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_nav_links_for_auth.html.erb (2.1ms)
+  Rendered layouts/_navigation.html.erb (4.2ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 86ms (Views: 84.0ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/users/sign_out" for 10.240.0.187 at 2016-11-07 14:48:08 +0000
+Cannot render console from 10.240.0.187! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"t7IERot7uVpIA6DXIw81wuCnklPj1GeU4gEGux2P27ElpxTyDa8WjiK9e/sqpw9EL2H8bC/q26sQ59vLKfP5SA=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://selt-project-jacobv90.c9users.io:8080/
+Completed 302 Found in 622ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 10.240.0.206 at 2016-11-07 14:48:08 +0000
+Cannot render console from 10.240.0.206! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (3.8ms)
+  Rendered layouts/_navigation.html.erb (5.9ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+Completed 200 OK in 85ms (Views: 83.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 10.240.1.64 at 2016-11-07 14:48:26 +0000
+Cannot render console from 10.240.1.64! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (40.1ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.7ms)
+  Rendered layouts/_navigation.html.erb (2.9ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 133ms (Views: 131.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 10.240.0.207 at 2016-11-07 14:48:28 +0000
+Cannot render console from 10.240.0.207! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MjPrjFZIirlKybJ7wNdgQjCP7SGfGl9AreUswbA0RXzkP6WbptIFgf+0niAUMJ38xFsfTbS4WJYia/CPB+mYdQ==", "user"=>{"email"=>"jacobveal90@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "jacobveal90@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2016-11-07 14:48:29 UTC], ["current_sign_in_ip", "10.240.0.207"], ["sign_in_count", 2], ["updated_at", 2016-11-07 14:48:29 UTC], ["id", 2]]
+  [1m[35m (11.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://selt-project-jacobv90.c9users.io:8080/
+Completed 302 Found in 192ms (ActiveRecord: 12.9ms)
+
+
+Started GET "/" for 10.240.1.64 at 2016-11-07 14:48:29 +0000
+Cannot render console from 10.240.1.64! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_nav_links_for_auth.html.erb (2.3ms)
+  Rendered layouts/_navigation.html.erb (4.9ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+Completed 200 OK in 104ms (Views: 100.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/dashboard" for 10.240.1.60 at 2016-11-07 14:48:38 +0000
+Cannot render console from 10.240.1.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProfileController#dashboard as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering profile/dashboard.html.erb within layouts/profile
+  Rendered profile/_profile_widget.html.erb (0.3ms)
+  Rendered profile/dashboard.html.erb within layouts/profile (1.8ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.6ms)
+  Rendered layouts/_navigation.html.erb (2.6ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+  Rendered profile/_side_menu.html.erb (0.4ms)
+Completed 200 OK in 98ms (Views: 93.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/dashboard" for 10.240.0.207 at 2016-11-07 14:52:20 +0000
+Cannot render console from 10.240.0.207! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProfileController#dashboard as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering profile/dashboard.html.erb within layouts/profile
+  Rendered profile/_profile_widget.html.erb (0.3ms)
+  Rendered profile/dashboard.html.erb within layouts/profile (2.0ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.0ms)
+  Rendered layouts/_navigation.html.erb (3.3ms)
+  Rendered layouts/_messages.html.erb (1.0ms)
+  Rendered profile/_side_menu.html.erb (0.3ms)
+Completed 200 OK in 173ms (Views: 169.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/dashboard" for 10.240.0.241 at 2016-11-07 14:52:22 +0000
+Cannot render console from 10.240.0.241! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProfileController#dashboard as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering profile/dashboard.html.erb within layouts/profile
+  Rendered profile/_profile_widget.html.erb (0.3ms)
+  Rendered profile/dashboard.html.erb within layouts/profile (3.0ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.5ms)
+  Rendered layouts/_navigation.html.erb (2.3ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered profile/_side_menu.html.erb (0.3ms)
+Completed 200 OK in 188ms (Views: 184.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/dashboard" for 10.240.0.241 at 2016-11-07 14:52:37 +0000
+Cannot render console from 10.240.0.241! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProfileController#dashboard as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering profile/dashboard.html.erb within layouts/profile
+  Rendered profile/_profile_widget.html.erb (0.4ms)
+  Rendered profile/dashboard.html.erb within layouts/profile (1.8ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/ubuntu/workspace/HomeEase_Portal/app/assets/stylesheets/overview.css.scss to /home/ubuntu/workspace/HomeEase_Portal/app/assets/stylesheets/overview.scss. (called from _app_views_layouts_profile_html_erb__3523638487628123852_70014052254880 at /home/ubuntu/workspace/HomeEase_Portal/app/views/layouts/profile.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/ubuntu/workspace/HomeEase_Portal/app/assets/stylesheets/overview.css.scss to /home/ubuntu/workspace/HomeEase_Portal/app/assets/stylesheets/overview.scss. (called from _app_views_layouts_profile_html_erb__3523638487628123852_70014052254880 at /home/ubuntu/workspace/HomeEase_Portal/app/views/layouts/profile.html.erb:7)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.5ms)
+  Rendered layouts/_navigation.html.erb (2.5ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered profile/_side_menu.html.erb (0.3ms)
+Completed 200 OK in 2070ms (Views: 2066.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 10.240.0.179 at 2016-11-07 14:52:46 +0000
+Cannot render console from 10.240.0.179! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_nav_links_for_auth.html.erb (2.0ms)
+  Rendered layouts/_navigation.html.erb (3.7ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 82ms (Views: 80.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/dashboard" for 10.240.0.179 at 2016-11-07 14:53:08 +0000
+Cannot render console from 10.240.0.179! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProfileController#dashboard as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering profile/dashboard.html.erb within layouts/profile
+  Rendered profile/_profile_widget.html.erb (0.3ms)
+  Rendered profile/dashboard.html.erb within layouts/profile (1.8ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/ubuntu/workspace/HomeEase_Portal/app/assets/stylesheets/overview.css.scss to /home/ubuntu/workspace/HomeEase_Portal/app/assets/stylesheets/overview.scss. (called from _app_views_layouts_profile_html_erb__3523638487628123852_70014090900900 at /home/ubuntu/workspace/HomeEase_Portal/app/views/layouts/profile.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/ubuntu/workspace/HomeEase_Portal/app/assets/stylesheets/overview.css.scss to /home/ubuntu/workspace/HomeEase_Portal/app/assets/stylesheets/overview.scss. (called from _app_views_layouts_profile_html_erb__3523638487628123852_70014090900900 at /home/ubuntu/workspace/HomeEase_Portal/app/views/layouts/profile.html.erb:7)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.5ms)
+  Rendered layouts/_navigation.html.erb (2.5ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+  Rendered profile/_side_menu.html.erb (0.4ms)
+Completed 200 OK in 2756ms (Views: 2753.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/dashboard" for 10.240.0.186 at 2016-11-07 14:53:14 +0000
+Cannot render console from 10.240.0.186! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProfileController#dashboard as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering profile/dashboard.html.erb within layouts/profile
+  Rendered profile/_profile_widget.html.erb (0.3ms)
+  Rendered profile/dashboard.html.erb within layouts/profile (1.8ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.6ms)
+  Rendered layouts/_navigation.html.erb (3.2ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+  Rendered profile/_side_menu.html.erb (0.5ms)
+Completed 200 OK in 96ms (Views: 92.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 10.240.1.64 at 2016-11-07 14:53:47 +0000
+Cannot render console from 10.240.1.64! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_nav_links_for_auth.html.erb (2.5ms)
+  Rendered layouts/_navigation.html.erb (4.4ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+Completed 200 OK in 87ms (Views: 84.8ms | ActiveRecord: 0.4ms)
+
+
