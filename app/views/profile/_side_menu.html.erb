@@ -20,10 +20,7 @@
                    Home Ease Management
                 </a>
             </div>
-
-           
         </div>
-
     </div>
 
     <!-- Main Menu -->
@@ -32,7 +29,26 @@
 
             <li><a href="dashboard"><span class="glyphicon glyphicon-dashboard"></span>Dashboard</a></li>
             <li class="active"><a href="bank"><span class="glyphicon glyphicon-credit-card"></span>Bank</a></li>
-            <li><a href="properties"><span class="glyphicon glyphicon-home"></span>Properties</a></li>
+            
+            <!-- Dropdown for Properties -->
+            <li class = "panel panel-default" id = "dropdown">
+                <a data-toggle = "collapse" href = "#dropdown-properties">
+                    <span class = "glyphicon glyphicon-home"></span> Properties <span class = "caret"></span>
+                </a>
+                <!-- dropdown to list properties -->
+                <div id = "dropdown-properties" class = "panel-collapse collapse">
+                    <div class = "panel-body">
+                        <ul class = "nav navbar-nav">
+                             <% (Property.all).each do |property| %>
+                             <li><a href = "properties"> <%= property.address %></a></li>
+                             <% end %>
+                            <li><a href = "#">Add New Property</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </li>
+            
             <li><a href="#"><span class="glyphicon glyphicon-cog"></span>Settings</a></li>
 
         </ul>

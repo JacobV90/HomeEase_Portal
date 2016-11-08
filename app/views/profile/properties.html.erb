@@ -1,63 +1,45 @@
 <% content_for :side_content do%>
 <style>
-p.padding {
-    padding-left: 2cm;
-}
-h1.padding_for_header {
-    padding-left: 0cm;
-
-}
-h3.padding {
-    padding-left: 2cm;
-
-}
-
-
-
+  div.property-info{
+   border: 2px solid black;
+   height: 250px;
+   width: 75%;
+   padding: 20px;
+  }
 </style>
 
 
 
-<p class="padding">
-  <div class="container">
-    <div class="row">
-      <h1 class = "padding_for_header" align = "center">Properties Banner Will Go here!!!!!</h2>
-      <div class="column">
-        <table class="table" padding-left = 2>
-          <h3 class = "padding" align = "right">
-               Property Information 
-            </h3>
-          <tbody>
-            
-            <% (Property.all).each do |property| %>
-             
-                
-                     
-                          <tr>
-                              <th>
-                              <img src="http://placehold.it/190x250" alt="" class="img-rounded img-responsive"/>
-                              </th> 
-                              <th>
-                                <div> <b>Address: </b><%= property.address %></div>
-                                <div><b>Expected Rent: </b> <%= property.rent_amount %></div>
-                                <div><b>Number of Bedrooms: </b><%= property.number_bedrooms %></div>
-                                <div><b>Number of Bathrooms: </b><%= property.number_bathrooms %></div>
-                                <div><b>Featured Amenities: </b> <%= property.amenities %></div>
-                                <div class="btn-group" role="group" aria-label="Basic example" >
-                                  <button type="button" class="btn btn-secondary">Edit Property</button>
-                                  <button type="button" class="btn btn-secondary">Remove Property</button>
-                                </div>
-                              </th>
-                           
-                          </tr>
-                   
-                
-    
-            <% end %>
-          </tbody>
-        </table>
-      </div>
+  <div class="container-fluid">
+    <div class="side-body">
+      <h1 align="center">Properties Banner Will Go here!!!!!</h2>
+
+        <h3 align="center">
+          Property Information
+        </h3>
+
+        <% (Property.all).each do |property| %>
+
+
+         
+          <div class = "property-info">
+              <img align="left" src="http://placehold.it/190x250" alt="" class="img-rounded img-responsive" style="padding-right: 10px" />
+              <p><b>Address: </b> <%= property.address %></p>
+              <p><b>Expected Rent: </b><%= property.rent_amount %></p>
+              <p><b>Number of Bedrooms: </b><%= property.number_bedrooms %></p>
+              <p><b>Number of Bathrooms: </b><%= property.number_bathrooms %></p>
+              <p><b>Featured Amenities: </b><%= property.amenities %></p>
+          </div>
+              <div class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-secondary">Edit Property</button>
+                <button type="button" class="btn btn-secondary">Remove Property</button>
+              </div>
+          
+
+
+
+          <% end %>
+
     </div>
   </div>
-</p>
-<% end %>
+  <% end %>
