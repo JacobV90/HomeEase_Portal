@@ -45972,3 +45972,171 @@ Migrating to Lastmigratefix (20161108184829)
             FROM sqlite_temp_master
             WHERE name='index_users_on_email' AND type='index'
 [0m
+Started GET "/" for 10.240.0.179 at 2016-11-08 18:51:10 +0000
+Cannot render console from 10.240.0.179! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (3.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered layouts/_nav_links_for_auth.html.erb (19.5ms)
+  Rendered layouts/_navigation.html.erb (22.0ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+Completed 200 OK in 664ms (Views: 637.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/dashboard" for 10.240.0.182 at 2016-11-08 18:51:13 +0000
+Cannot render console from 10.240.0.182! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProfileController#dashboard as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering profile/dashboard.html.erb within layouts/profile
+  Rendered profile/_profile_widget.html.erb (0.9ms)
+  Rendered profile/dashboard.html.erb within layouts/profile (3.9ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.8ms)
+  Rendered layouts/_navigation.html.erb (2.8ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  [1m[36mProperty Load (0.3ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  Rendered profile/_side_menu.html.erb (3.1ms)
+Completed 200 OK in 139ms (Views: 129.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/about" for 10.240.0.187 at 2016-11-08 18:51:15 +0000
+Cannot render console from 10.240.0.187! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProfileController#about as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering profile/about.html.erb within layouts/profile
+  Rendered profile/about.html.erb within layouts/profile (0.7ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.4ms)
+  Rendered layouts/_navigation.html.erb (2.1ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  Rendered profile/_side_menu.html.erb (1.1ms)
+Completed 200 OK in 155ms (Views: 152.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 10.240.1.17 at 2016-11-08 18:53:56 +0000
+Cannot render console from 10.240.1.17! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (3.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered layouts/_nav_links_for_auth.html.erb (21.8ms)
+  Rendered layouts/_navigation.html.erb (23.8ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+Completed 200 OK in 508ms (Views: 480.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/dashboard" for 10.240.0.208 at 2016-11-08 18:53:59 +0000
+Cannot render console from 10.240.0.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProfileController#dashboard as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering profile/dashboard.html.erb within layouts/profile
+  Rendered profile/_profile_widget.html.erb (0.9ms)
+  Rendered profile/dashboard.html.erb within layouts/profile (2.8ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.4ms)
+  Rendered layouts/_navigation.html.erb (4.6ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+  [1m[36mProperty Load (0.3ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  Rendered profile/_side_menu.html.erb (4.5ms)
+Completed 200 OK in 165ms (Views: 157.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/about" for 10.240.0.119 at 2016-11-08 18:54:00 +0000
+Cannot render console from 10.240.0.119! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProfileController#about as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering profile/about.html.erb within layouts/profile
+  Rendered profile/about.html.erb within layouts/profile (0.7ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.7ms)
+  Rendered layouts/_navigation.html.erb (3.1ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+  [1m[36mProperty Load (0.3ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  Rendered profile/_side_menu.html.erb (1.5ms)
+Completed 200 OK in 235ms (Views: 231.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 10.240.0.204 at 2016-11-08 18:59:37 +0000
+Cannot render console from 10.240.0.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (3.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered layouts/_nav_links_for_auth.html.erb (29.1ms)
+  Rendered layouts/_navigation.html.erb (31.3ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+Completed 200 OK in 467ms (Views: 442.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/dashboard" for 10.240.1.60 at 2016-11-08 18:59:39 +0000
+Cannot render console from 10.240.1.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProfileController#dashboard as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering profile/dashboard.html.erb within layouts/profile
+  Rendered profile/_profile_widget.html.erb (0.4ms)
+  Rendered profile/dashboard.html.erb within layouts/profile (3.4ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.8ms)
+  Rendered layouts/_navigation.html.erb (3.0ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+  [1m[36mProperty Load (0.3ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  Rendered profile/_side_menu.html.erb (4.7ms)
+Completed 200 OK in 286ms (Views: 277.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/about" for 10.240.1.60 at 2016-11-08 18:59:40 +0000
+Cannot render console from 10.240.1.60! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProfileController#about as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering profile/about.html.erb within layouts/profile
+  Rendered profile/about.html.erb within layouts/profile (0.9ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.8ms)
+  Rendered layouts/_navigation.html.erb (3.2ms)
+  Rendered layouts/_messages.html.erb (0.9ms)
+  [1m[36mProperty Load (0.3ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  Rendered profile/_side_menu.html.erb (1.7ms)
+Completed 200 OK in 112ms (Views: 106.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 10.240.1.19 at 2016-11-08 19:00:57 +0000
+Cannot render console from 10.240.1.19! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (3.1ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered layouts/_nav_links_for_auth.html.erb (23.1ms)
+  Rendered layouts/_navigation.html.erb (25.2ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+Completed 200 OK in 419ms (Views: 400.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/dashboard" for 10.240.0.208 at 2016-11-08 19:00:59 +0000
+Cannot render console from 10.240.0.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProfileController#dashboard as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering profile/dashboard.html.erb within layouts/profile
+  Rendered profile/_profile_widget.html.erb (0.3ms)
+  Rendered profile/dashboard.html.erb within layouts/profile (2.6ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.1ms)
+  Rendered layouts/_navigation.html.erb (3.2ms)
+  Rendered layouts/_messages.html.erb (1.4ms)
+  [1m[36mProperty Load (0.3ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  Rendered profile/_side_menu.html.erb (4.1ms)
+Completed 200 OK in 165ms (Views: 156.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/about" for 10.240.0.208 at 2016-11-08 19:01:02 +0000
+Cannot render console from 10.240.0.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProfileController#about as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering profile/about.html.erb within layouts/profile
+  Rendered profile/about.html.erb within layouts/profile (0.8ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.6ms)
+  Rendered layouts/_navigation.html.erb (3.1ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  Rendered profile/_side_menu.html.erb (1.3ms)
+Completed 200 OK in 177ms (Views: 172.1ms | ActiveRecord: 0.6ms)
+
+
