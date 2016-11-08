@@ -1,20 +1,21 @@
 class PropertiesController < ProfileController
-  before_action :authenticate_user!
-   
+  #before_action :authenticate_user!
+    skip_before_filter :verify_authenticity_token  
    def prop_params
-       params.require(:property).permit(:address, :rent_amount, :number_bedrooms, :number_bathrooms, :amenities, :description)
+       params.require(:properties).permit(:address, :rent_amount, :number_bedrooms, :number_bathrooms, :amenities, :description)
    end
 
    def new
+       @properties = Property.all
    end
 
    def show
-      @properties= Property.find(params[:id])
+       @properties = Property.create!(prop_params)
    end
 
    def create
-     @property = Property.create!(prop_params)
-     #redirect_to property_path @property
+     @properties = Property.create!(prop_params)
+     redirect_to properties_path
    end
    
    def index

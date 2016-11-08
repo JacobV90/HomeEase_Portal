@@ -1,0 +1,16 @@
+<% content_for :side_content do %>
+<%= form_tag 'properties#create' do %>
+  <%= label :properties, :address, 'Address' %>
+  <%= text_field :properties, 'address', :id => 'address' %>
+  <%= label :properties, :rent_amount, 'Rent Amount' %>
+  <%= text_field :properties, 'rent_amount', :id => 'rent_amount' %>
+  <%= label :properties, :number_bedrooms, 'Number Of Bedrooms' %>
+  <%= text_field :property, 'number_bedrooms', :id => 'number_bedrooms' %>
+  <%= label :properties, :amenities, 'Amenities' %>
+  <%= text_field :properties, 'amenities', :id => 'amenities' %>
+  <%= label :properties, :description, 'Description' %>
+  <%= text_field :properties, 'description', :id => 'description' %>
+  <%= submit_tag 'Create my account', :id => 'account_create' %>
+<% end %>
+
+<%end%> 
