@@ -26,6 +26,10 @@ class ProfileController < ApplicationController
      @properties = Property.all
   end
   
+  def adding
+    render "profile/adding"
+  end
+  
   def test_firebase
     response = FIREBASE.push("Owners", { :name => 'Test', :priority => 1 })
     if(response.success?)
