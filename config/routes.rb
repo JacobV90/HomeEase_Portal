@@ -12,5 +12,4 @@ Rails.application.routes.draw do
   get 'adding', to: 'profile#adding'
   resources :properties
 
-  
 end
