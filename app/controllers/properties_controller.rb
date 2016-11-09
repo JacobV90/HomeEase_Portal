@@ -10,15 +10,13 @@ class PropertiesController < ProfileController
    end
 
    def show
-       
-       @properties = Property.create!(prop_params)
+        @property = Property.find(params[:id])
    end
 
    def create
      @properties = Property.create!(prop_params)
      add_to_firebase
      redirect_to properties_path
-     
    end
    
    def index
