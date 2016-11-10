@@ -9,15 +9,17 @@
                     </div>
                     <div class="col-sm-6 col-md-8">
                         <h4>
-                            Bhaumik Patel</h4>
+                            
+                            Welcome <%= current_user.first_name %> !
+                            </h4>
                         <small><cite title="San Francisco, USA">San Francisco, USA <i class="glyphicon glyphicon-map-marker">
                         </i></cite></small>
                         <p>
-                            <i class="glyphicon glyphicon-envelope"></i>email@example.com
+                            <i class="glyphicon glyphicon-envelope"></i><%= current_user.email %>
                             <br />
-                            <i class="glyphicon glyphicon-globe"></i><a href="http://www.jquery2dotnet.com">www.jquery2dotnet.com</a>
+                            <i class="glyphicon glyphicon-globe"></i><a </a>
                             <br />
-                            <i class="glyphicon glyphicon-gift"></i>June 02, 1988</p>
+                            <i class="glyphicon glyphicon-gift"></i></p>
                         <!-- Split button -->
                         <div class="btn-group">
                             <button type="button" class="btn btn-primary">

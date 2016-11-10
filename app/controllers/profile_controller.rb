@@ -6,6 +6,7 @@ class ProfileController < ApplicationController
   
   def dashboard
      @properties = Property.all
+     @current = current_user
   end
    
   def bank
