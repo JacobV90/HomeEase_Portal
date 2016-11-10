@@ -1,0 +1,5 @@
+<% (Property.all).each do |property| %>
+    <%= render partial: "properties/property_widget", :locals => {property: property} %>
+<% end %>
+
+   

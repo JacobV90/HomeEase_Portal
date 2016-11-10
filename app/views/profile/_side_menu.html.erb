@@ -37,12 +37,6 @@
                     Dashboard
                <% end %>
             </li>
-            <li class="active">
-               <%= link_to bank_path do %> 
-                   <%= content_tag :span, "", :class => "glyphicon glyphicon-credit-card" %>
-                    Bank
-               <% end %>
-            </li>
             <!-- Dropdown-->
             <li class="panel panel-default" id="dropdown">
                 <a data-toggle="collapse" href="#dropdown-lvl1">
@@ -59,7 +53,7 @@
                                      Add a property
                                  <% end %>                             
                              </li>
-                            <% (Property.all).each do |prop| %>
+                            <% (Property.where("user_id = '#{current_user.id}'")).each do |prop| %>
                                 <li>
                                     <%= link_to prop.street.to_s, property_path(:id => prop.id) %>
                                 </li>
@@ -68,11 +62,26 @@
                     </div>
                 </div>
             </li>
-
+            
             <li>
-                <%= link_to about_path do %> 
-                   <%= content_tag :span, "", :class => "glyphicon glyphicon-info-sign" %>
-                    About
+                <%= link_to "#" do %> 
+                   <%= content_tag :span, "", :class => "glyphicon glyphicon-wrench" %>
+                    Repairs
+                <% end %>
+            </li>
+            
+            <li class="active">
+               <%= link_to bank_path do %> 
+                   <%= content_tag :span, "", :class => "glyphicon glyphicon-credit-card" %>
+                    Bank
+               <% end %>
+            </li>
+
+            
+            <li>
+                <%= link_to settings_path do %> 
+                   <%= content_tag :span, "", :class => "glyphicon glyphicon-cog" %>
+                    Settings
                 <% end %>
             </li>
 

@@ -29,7 +29,7 @@ class Property < ApplicationRecord
                     :email => self.user.email
                 }
             },
-            "Owners/#{self.user.id.to_s}/Properties/#{self.id.to_s}" => {
+            "Owners/#{self.user.id.to_s}/properties/#{self.id.to_s}" => {
                 :street => self.street, 
                 :city => self.city,
                 :state => self.state,

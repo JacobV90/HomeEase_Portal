@@ -2,21 +2,8 @@
 <div class="container-fluid">
     <div class="side-body">
     <%= render "banner" %>
-    <div class = "property-info">
-            <img align="left" src="http://placehold.it/190x250" alt="" class="img-rounded img-responsive" style="padding-right: 10px" />
-              <p><b>Street: </b> <%= @property.street %></p>
-              <p><b>City: </b> <%= @property.city %></p>
-              <p><b>State: </b> <%= @property.state %></p>
-              <p><b>Zipcode: </b> <%= @property.zipcode %></p>
-              <p><b>Price per month: </b><%= @property.price %></p>
-              <p><b>Number of Bedrooms: </b><%= @property.bedrooms %></p>
-              <p><b>Number of Bathrooms: </b><%= @property.bathrooms %></p>
-              <p><b>Featured Amenities: </b><%= @property.amenities %></p>
-              <p><b>Description: </b><%= @property.description %></p>
-              <br/>
-              
-    </div>
-        <div class="btn-group" role="group" aria-label="Basic example">
+    <%= render partial: "property_widget", :locals => {property: @property} %>
+    <div class="btn-group" role="group" aria-label="Basic example">
              <button type="button" class="btn btn-secondary">Edit Property</button>
              <%= button_to "Remove property",{:controller => :properties,
                  :action => 'destroy', :id => @property.id }, :method => :delete %>        
@@ -24,5 +11,4 @@
         </div>
         </div>
           
-
 <% end %>

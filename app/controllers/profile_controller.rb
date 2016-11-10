@@ -13,4 +13,9 @@ class ProfileController < ApplicationController
     render "bank"
   end
   
+  def settings
+    puts "settings page"
+    render "settings"
+  end
+  
 end
