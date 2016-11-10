@@ -22,10 +22,10 @@ class PropertiesController < ProfileController
    end
    
    def destroy
-         @properties = Property.find(params[:id])
-         @properties.destroy
-         puts "Property '#{@properties.address}' deleted."
-         redirect_to property_path
+         @property = Property.find(params[:id])
+         @property.destroy
+         puts "Property '#{@property.street}' deleted."
+         redirect_to properties_path
    end
     
 end

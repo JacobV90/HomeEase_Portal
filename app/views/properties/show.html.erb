@@ -18,7 +18,8 @@
     </div>
         <div class="btn-group" role="group" aria-label="Basic example">
              <button type="button" class="btn btn-secondary">Edit Property</button>
-             <button type="button" class="btn btn-secondary">Remove Property</button>
+             <%= button_to "Remove property",{:controller => :properties,
+                 :action => 'destroy', :id => @property.id }, :method => :delete %>        
         </div>
         </div>
         </div>

@@ -4,6 +4,7 @@ class Property < ApplicationRecord
   
   belongs_to :user
   after_create :send_to_firebase
+  before_destroy :delete_from_firebase
   
   def self.create_property!(prop_params)
         Property.create!(prop_params)
@@ -43,4 +44,12 @@ class Property < ApplicationRecord
      
   end
   
+  def delete_from_firebase
+      prop_id = self.id.to_s
+      user_id = self.user.id.to_s
+    
+      FIREBASE.delete("Properties/#{prop_id}")
+      FIREBASE.delete("Owners/#{user_id}/Properties/#{prop_id}")
+  end
+
 end
