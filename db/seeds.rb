@@ -8,7 +8,13 @@
 
 user = CreateAdminService.new.call
 puts 'CREATED ADMIN USER: ' << user.email
-example_property = Property.create(address: '666 Fluffy Bunny Way, TooKuhl4School',rent_amount: 2200, number_bedrooms: 3,number_bathrooms: 1)
-puts 'CREATED EXAMPLE PROPERTY: ' << example_property.address
-kyles_house = Property.create(address: '670 South Governor, Iowa City',rent_amount: 2800, number_bedrooms: 6,number_bathrooms: 2)
-puts 'CREATED EXAMPLE PROPERTY: ' << kyles_house.address
+
+example_property = user.properties.create(street: '666 Fluffy Bunny Way', city: 'TooKuhl4School', 
+    state: "Iowa" , zipcode: 52240, price: 2200, bedrooms: 3,bathrooms: 1, amenities: "Selt and Com nets", 
+    description: "something descriptive would go here")
+puts 'CREATED EXAMPLE PROPERTY: ' << example_property.street
+
+kyles_house = user.properties.create(street: '670 South Governor', city: 'Iowa City', state: 'Iowa',
+    zipcode: 52240, price: 2800, bedrooms: 6, bathrooms: 2, amenities: "chill room mates", 
+    description: "they hate sweet sweet chocolate")
+puts 'CREATED EXAMPLE PROPERTY: ' << kyles_house.street

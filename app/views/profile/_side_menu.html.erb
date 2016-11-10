@@ -36,7 +36,7 @@
                    <%= content_tag :span, "", :class => "glyphicon glyphicon-dashboard" %>
                     Dashboard
                <% end %>
-               </li>
+            </li>
             <li class="active">
                <%= link_to bank_path do %> 
                    <%= content_tag :span, "", :class => "glyphicon glyphicon-credit-card" %>
@@ -46,15 +46,23 @@
             <!-- Dropdown-->
             <li class="panel panel-default" id="dropdown">
                 <a data-toggle="collapse" href="#dropdown-lvl1">
-                    <span class="glyphicon glyphicon-home"></span>Properties<span class="caret"></span>
+                        <span class="glyphicon glyphicon-home"></span>Properties<span class="caret"></span>
                 </a>
 
                 <!-- Dropdown level 1 -->
                 <div id="dropdown-lvl1" class="panel-collapse collapse">
                     <div class="panel-body">
-                        <ul class="nav navbar-nav">
+                        <ul class="nav navbar-nav" id="property-dropdown">
+                             <li>
+                                 <%= link_to new_property_path do %> 
+                                     <%= content_tag :span, "", :class => "glyphicon glyphicon-plus" %>
+                                     Add a property
+                                 <% end %>                             
+                             </li>
                             <% (Property.all).each do |prop| %>
-                                <li><%= link_to prop.address.to_s, property_path(:id => prop.id) %></li>
+                                <li>
+                                    <%= link_to prop.street.to_s, property_path(:id => prop.id) %>
+                                </li>
                             <% end %>
                         </ul>
                     </div>

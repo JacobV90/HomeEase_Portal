@@ -13,14 +13,20 @@
 ActiveRecord::Schema.define(version: 20161108184829) do
 
   create_table "properties", force: :cascade do |t|
-    t.string  "address",           default: "666 Fluffy Bunny Way, TooCool4School",                                                                      null: false
-    t.integer "rent_amount",       default: 1000
-    t.integer "integer",           default: 0
-    t.integer "number_bathrooms",  default: 0
-    t.integer "number_bedrooms",   default: 0
-    t.string  "amenities",         default: "You can list notable things about your property here, such as if pets are allowed or parking is available"
-    t.string  "description",       default: ""
-    t.boolean "available_to_rent", default: true
+    t.integer "author_id"
+    t.string  "street",       default: "",   null: false
+    t.string  "city",         default: "",   null: false
+    t.string  "state",        default: "",   null: false
+    t.integer "zipcode",                     null: false
+    t.integer "price",        default: 0,    null: false
+    t.integer "bathrooms",    default: 0
+    t.integer "bedrooms",     default: 0
+    t.string  "amenities",    default: ""
+    t.string  "description",  default: ""
+    t.boolean "availability", default: true
+    t.integer "user_id"
+    t.index ["author_id"], name: "index_properties_on_author_id"
+    t.index ["user_id"], name: "index_properties_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -36,7 +42,10 @@ ActiveRecord::Schema.define(version: 20161108184829) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "name"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "middle_name"
+    t.string   "phone_number"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

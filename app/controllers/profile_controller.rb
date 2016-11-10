@@ -4,10 +4,6 @@ class ProfileController < ApplicationController
 
   before_action :authenticate_user!
   
-  def index
-     @properties = Property.all
-  end
-  
   def dashboard
      @properties = Property.all
   end
@@ -15,26 +11,6 @@ class ProfileController < ApplicationController
   def bank
     puts "bank"
     render "bank"
-  end
-  
-  def create
-    test_firebase
-    render "bank"
-  end
-   
-  def property
-     @properties = Property.all
-  end
-  
-  def adding
-    render "profile/adding"
-  end
-  
-  def test_firebase
-    response = FIREBASE.push("Owners", { :name => 'Test', :priority => 1 })
-    if(response.success?)
-      puts "response success"
-    end
   end
   
 end

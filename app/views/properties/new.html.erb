@@ -1,23 +1,20 @@
-<h3>Property</h3>
-<p>Test</p>
-
-%h1 Add propertyffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffssssssssssssssssssssssssssssssssssssssssssssss
-
-= form_tag adding_path do
-
-  = label :properties, :address, 'Address'
-  = text_field :properties, 'address', :id => 'address'
-  
-  = label :properties, :rent_amount, 'Rent Amount'
-  = text_field :properties, 'rent_amount', :id => 'rent_amount'
-  
-  = label :properties, :number_bedrooms, 'Number Of Bedrooms'
-  = text_field :properties, 'number_bedrooms', :id => 'number_bedrooms'
-  
-  = label :properties, :amenities, 'Amenities'
-  = text_field :properties, 'amenities', :id => 'amenities'
-  
-  = label :properties, :description, 'Description'
-  = text_field :properties, 'description', :id => 'description'
-  
-  = submit_tag 'Create my account', :id => 'account_create'
+<% content_for :side_content do %>
+ <div class="container-fluid">
+    <div class="side-body">
+    <%= bootstrap_form_tag url: '/create_property' do |f| %>
+      <%= f.text_field  :street %>
+      <%= f.text_field :city %>
+      <%= f.text_field :state %>
+      <%= f.number_field :zipcode %>
+      <%= f.number_field :price %>
+      <%= f.number_field :bedrooms %>
+      <%= f.number_field :bathrooms %>
+      <%= f.text_field :amenities %>
+      <%= f.text_field :description %>
+      <%= f.submit "Add property" %>
+   <% end %>
+    </div>
+  </div>
+ 
+   
+<%end%> 
