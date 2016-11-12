@@ -10,10 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161108184829) do
+ActiveRecord::Schema.define(version: 20161112202309) do
 
   create_table "properties", force: :cascade do |t|
-    t.integer "author_id"
     t.string  "street",       default: "",   null: false
     t.string  "city",         default: "",   null: false
     t.string  "state",        default: "",   null: false
@@ -25,8 +24,16 @@ ActiveRecord::Schema.define(version: 20161108184829) do
     t.string  "description",  default: ""
     t.boolean "availability", default: true
     t.integer "user_id"
-    t.index ["author_id"], name: "index_properties_on_author_id"
     t.index ["user_id"], name: "index_properties_on_user_id"
+  end
+
+  create_table "tenants", force: :cascade do |t|
+    t.integer "property_id"
+    t.string  "first_name"
+    t.string  "last_name"
+    t.string  "email"
+    t.string  "phone_number"
+    t.index ["property_id"], name: "index_tenants_on_property_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -42,7 +49,7 @@ ActiveRecord::Schema.define(version: 20161108184829) do
     t.string   "last_sign_in_ip"
     t.string   "first_name"
     t.string   "last_name"
-    t.integer  "phone_number"
+    t.string   "phone_number"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.index ["email"], name: "index_users_on_email", unique: true

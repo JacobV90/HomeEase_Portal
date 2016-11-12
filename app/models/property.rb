@@ -3,6 +3,8 @@ class Property < ApplicationRecord
   # :confirmable, :lockable, :timeoutable and :omniauthable
   
   belongs_to :user
+  has_many :tenants, dependent: :destroy
+
   after_create :send_to_firebase
   before_destroy :delete_from_firebase
   
@@ -18,11 +20,14 @@ class Property < ApplicationRecord
                 :city => self.city,
                 :state => self.state,
                 :zipcode => self.zipcode,
+                :lat => "",
+                :long => "",
                 :price => self.price,
                 :bedrooms => self.bedrooms,
                 :bathrooms => self.bathrooms,
                 :description => self.description,
                 :amenities => self.amenities,
+                :tenants => "",
                 :owner => {
                     :first_name => self.user.first_name,
                     :last_name => self.user.last_name,

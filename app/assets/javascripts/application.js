@@ -16,5 +16,4 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require_tree .
-//= require scrollify
-//= require ./profile
+
