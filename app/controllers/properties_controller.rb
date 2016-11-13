@@ -21,6 +21,19 @@ class PropertiesController < ProfileController
         @properties = Property.all
    end
    
+   def edit
+       puts "edit happening"
+       @property = Property.find(params[:id])
+       #redirect_to edit_property_path
+   end
+   
+   def update
+       @property = Property.find(params[:id])
+       @property.update(street: params[:street], city: params[:city],state: params[:state],zipcode: params[:zipcode],price: params[:price],bedrooms: params[:bedrooms],bathrooms: params[:bathrooms],amenities: params[:amenities],description: params[:description]) 
+        redirect_to property_path(params[:id])
+       puts "update happening"
+   end
+   
    def destroy
          @property = Property.find(params[:id])
          @property.destroy

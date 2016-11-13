@@ -24,5 +24,6 @@ Rails.application.routes.draw do
   
   resources :properties
   post 'create_property', to: 'properties#create'
-
+  get 'properties/:id/edit', to: 'properties#edit'
+  put 'properties/:id', to: 'properties#update'
 end

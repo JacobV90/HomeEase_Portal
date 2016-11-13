@@ -4,7 +4,9 @@
     <%= render "banner" %>
     <%= render partial: "property_widget", :locals => {property: @property} %>
     <div class="btn-group" role="group" aria-label="Basic example">
-             <button type="button" class="btn btn-secondary">Edit Property</button>
+             
+             <%= button_to "Edit Property", {:controller => :properties,
+                 :action => 'edit', :id => @property.id }, :method => :get %> 
              <%= button_to "Remove property",{:controller => :properties,
                  :action => 'destroy', :id => @property.id }, :method => :delete %>        
     </div>
