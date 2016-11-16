@@ -1,3 +1,6 @@
+require 'spec_helper'
+require 'rails_helper'
+
 # Feature: Sign out
 #   As a user
 #   I want to sign out
