@@ -1,6 +1,4 @@
 <% content_for :side_content do %>
- <div class="container-fluid" >
-    <div class="side-body">
     <%= bootstrap_form_tag(url:  property_path , method: "put") do |f| %>
       <%= f.text_field :street, :value => @property.street  %>
       <%= f.text_field :city, :value => @property.city %>
@@ -13,8 +11,4 @@
       <%= f.text_field :description, :value => @property.description %>
       <%= f.submit "Edit property" %>
    <% end %>
-    </div>
-  </div>
- 
-   
 <%end%> 

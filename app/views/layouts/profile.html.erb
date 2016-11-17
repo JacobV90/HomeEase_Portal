@@ -18,15 +18,17 @@
     </header>
     <main role="main">
        <%= render 'layouts/messages' %>
-       <div class="row">
-       		<div>
-       			<%= render 'side_menu' %>
-       		</div>
-	    	  <div >
-	       		<%= yield :side_content%>
-	        </div>
-       </div>
-    </main>
+       <div class="container-fluid">
+         <div class="row">
+           <div class="side-menu">
+         	  <%= render 'side_menu' %>
+         	 </div>
+          <div class="side-body">
+  	       <%= yield :side_content%>
+  	      </div>
+  	     </div>
+  	   </div>
+	   </main>
   </body>
 </html>
 

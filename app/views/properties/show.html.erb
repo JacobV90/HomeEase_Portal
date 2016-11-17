@@ -1,6 +1,4 @@
 <%content_for :side_content do %>
-<div class="container-fluid">
-    <div class="side-body">
     <%= render "banner" %>
     <%= render partial: "property_widget", :locals => {property: @property} %>
     <div class="btn-group" role="group" aria-label="Basic example">
@@ -13,7 +11,4 @@
     <% (Tenant.where("property_id = '#{@property.id}'")).each do |tenant| %>
                 <%= render partial: "tenant_widget", :locals => {tenant: tenant} %>
     <% end %>
-        </div>
-        </div>
-          
 <% end %>
