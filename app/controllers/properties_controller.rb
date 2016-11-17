@@ -17,6 +17,15 @@ class PropertiesController < ProfileController
         redirect_to property_path(:id => @property.id)
    end
    
+   def upload
+    uploaded_io = params[:image]
+    puts Dir.pwd
+    File.open(Rails.root.join('app', 'assets/images', (params[:id] + '.png') ), 'wb') do |file|
+      file.write(uploaded_io.read)
+    end
+    redirect_to :back
+   end
+
    def index
         @properties = Property.all
    end

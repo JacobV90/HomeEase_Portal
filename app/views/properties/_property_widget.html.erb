@@ -1,5 +1,8 @@
+
 <div class = "property-info">
-            <img align="left" src="http://placehold.it/190x250" alt="" class="img-rounded img-responsive" style="padding-right: 10px" />
+<div class = "property-view">
+            <%=image_tag (params[:id] + '.png'), class: 'img-rounded img-responsive',alt: '',size: "400x400",align: 'left', id: 'example-id', style: 'padding-right: 10px'%>
+</div>
               <p><b>Street: </b> <%= property.street %></p>
               <p><b>City: </b> <%= property.city %></p>
               <p><b>State: </b> <%= property.state %></p>
@@ -10,4 +13,13 @@
               <p><b>Featured Amenities: </b><%= property.amenities %></p>
               <p><b>Description: </b><%= property.description %></p>
               <br/>
+              <%= form_tag( {action: :upload, id: property.id },multipart: true )do %>
+              <%= file_field_tag 'image' %>
+              
+              <%= submit_tag(value = "Apply image", options = {}) %>
+              <% end %>
+              <br/>
+
+
+  
 </div>

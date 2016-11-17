@@ -25,5 +25,5 @@ Rails.application.routes.draw do
   
   resources :properties
   post 'create_property', to: 'properties#create'
-
+  post 'upload', to: 'properties#'
 end

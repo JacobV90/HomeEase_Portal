@@ -1,4 +1,7 @@
+
 <% content_for :side_content do %>
+
+    
     <%= bootstrap_form_tag url: '/create_property' do |f| %>
       <%= f.text_field  :street %>
       <%= f.text_field :city %>
@@ -9,6 +12,9 @@
       <%= f.number_field :bathrooms %>
       <%= f.text_field :amenities %>
       <%= f.text_field :description %>
+
+      
+      
       <%= f.submit "Add property" %>
    <% end %>
 <%end%> 
