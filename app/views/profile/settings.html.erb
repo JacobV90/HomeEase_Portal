@@ -1,7 +1,3 @@
 <% content_for :side_content do %>
-    <div class="container-fluid">
-        <div class="side-body">
-            <%= button_to "Delete Account", remove_user_path(current_user.id), :method => :delete %>   
-        </div>
-    </div>
+    <%= button_to "Delete Account", remove_user_path(current_user.id), :method => :delete %>   
 <% end %>
