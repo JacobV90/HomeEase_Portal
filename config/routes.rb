@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   
   resources :profile 
 
+  get 'maintenanceIssue', to: 'profile#maintenanceIssue'
   get 'bank', to: 'profile#bank'
   get 'dashboard', to: 'profile#dashboard'
   get 'settings', to: 'profile#settings'
@@ -24,6 +25,5 @@ Rails.application.routes.draw do
   
   resources :properties
   post 'create_property', to: 'properties#create'
-  get 'properties/:id/edit', to: 'properties#edit'
-  put 'properties/:id', to: 'properties#update'
+
 end

@@ -13,6 +13,11 @@ class ProfileController < ApplicationController
      @current = current_user
   end
    
+  def maintenanceIssue
+    puts "Maintenance was clicked"
+    render "maintenanceIssue"
+  end
+  
   def bank
     puts "bank"
     render "bank"
