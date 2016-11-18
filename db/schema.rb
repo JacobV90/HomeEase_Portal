@@ -10,20 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161112202309) do
+ActiveRecord::Schema.define(version: 20161117064400) do
 
   create_table "properties", force: :cascade do |t|
-    t.string  "street",       default: "",   null: false
-    t.string  "city",         default: "",   null: false
-    t.string  "state",        default: "",   null: false
-    t.integer "zipcode",                     null: false
-    t.integer "price",        default: 0,    null: false
-    t.integer "bathrooms",    default: 0
-    t.integer "bedrooms",     default: 0
-    t.string  "amenities",    default: ""
-    t.string  "description",  default: ""
-    t.boolean "availability", default: true
-    t.integer "user_id"
+    t.string   "street",                              default: "",   null: false
+    t.string   "city",                                default: "",   null: false
+    t.string   "state",                               default: "",   null: false
+    t.integer  "zipcode",                                            null: false
+    t.integer  "price",                               default: 0,    null: false
+    t.integer  "bathrooms",                           default: 0
+    t.integer  "bedrooms",                            default: 0
+    t.string   "amenities",                           default: ""
+    t.string   "description",                         default: ""
+    t.boolean  "availability",                        default: true
+    t.integer  "user_id"
+    t.binary   "image",              limit: 10485760
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
     t.index ["user_id"], name: "index_properties_on_user_id"
   end
 

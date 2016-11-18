@@ -12,6 +12,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'firebase'
 gem "haml-rails"
 gem 'bootstrap_form'
+gem 'paperclip'
 
 group :production do 
   gem "pg"
