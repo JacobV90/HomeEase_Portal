@@ -13,10 +13,14 @@
               <p><b>Featured Amenities: </b><%= property.amenities %></p>
               <p><b>Description: </b><%= property.description %></p>
               <br/>
-              <%= form_tag( {action: :upload, id: property.id },multipart: true )do %>
-              <%= file_field_tag 'image' %>
               
-              <%= submit_tag(value = "Apply image", options = {}) %>
+              <% if current_page?(controller: 'properties',action: 'show' )%>
+
+                  <%= form_tag( {action: :upload, id: property.id },multipart: true )do %>
+                  <%= file_field_tag 'image' %>
+                  
+                  <%= submit_tag(value = "Apply image", options = {}) %>
+                  <% end %>
               <% end %>
               <br/>
 
