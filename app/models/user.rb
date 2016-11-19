@@ -13,6 +13,7 @@ class User < ApplicationRecord
     puts "sending user to firebase"
     FIREBASE.update("",{
       "Owners/#{self.id}" => {
+        :owner_id => self.id,
         :first_name => self.first_name,
         :last_name => self.last_name,
         :email => self.email,

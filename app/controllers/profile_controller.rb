@@ -30,16 +30,16 @@ class ProfileController < ApplicationController
   
   #response to tenant adding property to their favorites
   def notifications
+    
     property = Property.find(params[:prop_id])
-    email = params[:tenants][:email]
-    first = params[:tenants][:first_name]
-    last = params[:tenants][:last_name]
     
-    if !email.equal?("")
-      property.tenants.create!({first_name: first, last_name: last, email: email})
+    params[:applicants].each_pair do |key, value|
+      if(!property.tenants.exists?(:email => value[:email]))
+        property.tenants.create!({first_name: value[:first_name], last_name: value[:last_name], email: value[:email],
+        phone_number: value[:phone_number]})
+      end
     end
-    
+
   end
-  
   
 end
