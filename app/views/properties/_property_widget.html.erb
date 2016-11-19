@@ -13,11 +13,6 @@
               <p><b>Featured Amenities: </b><%= property.amenities %></p>
               <p><b>Description: </b><%= property.description %></p>
               <br/>
-<<<<<<< HEAD
-              <%= form_tag( {action: :upload, id: property.id, controller: :properties},multipart: true )do %>
-              <%= file_field_tag 'image' %>
-=======
->>>>>>> sambranch
               
               <% if current_page?(controller: 'properties',action: 'show' )%>
 
@@ -29,7 +24,5 @@
                   <% end %>
               <% end %>
               <br/>
-
-
   
 </div>
