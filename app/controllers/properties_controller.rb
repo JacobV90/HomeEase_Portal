@@ -10,6 +10,10 @@ class PropertiesController < ProfileController
 
    def show
         @property = Property.find(params[:id])
+        #this is where the filter should be for people changing index path
+        if(@property.user_id != current_user.id)
+            redirect_to "https://www.google.com/logos/2010/pacman10-i.html"
+        end
    end
 
    def create
