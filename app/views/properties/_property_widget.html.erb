@@ -1,7 +1,7 @@
 
 <div class = "property-info">
 <div class = "property-view">
-            <%=image_tag (params[:id] + '.png'), class: 'img-rounded img-responsive',alt: '',size: "400x400",align: 'left', id: 'example-id', style: 'padding-right: 10px'%>
+            <%=image_tag ("#{property.id}" + '.png'), class: 'img-rounded img-responsive',alt: '',size: "400x400",align: 'left', id: 'example-id', style: 'padding-right: 10px'%>
 </div>
               <p><b>Street: </b> <%= property.street %></p>
               <p><b>City: </b> <%= property.city %></p>
@@ -13,13 +13,16 @@
               <p><b>Featured Amenities: </b><%= property.amenities %></p>
               <p><b>Description: </b><%= property.description %></p>
               <br/>
-              <%= form_tag( {action: :upload, id: property.id, controller: :properties},multipart: true )do %>
-              <%= file_field_tag 'image' %>
               
-              <%= submit_tag(value = "Apply image", options = {}) %>
+              <% if current_page?(controller: 'properties',action: 'show' )%>
+
+                  <%= form_tag( {action: :upload, id: property.id, controller: :properties},multipart: true )do %>
+                  <%= file_field_tag 'image' %>
+                  
+                  <%= submit_tag(value = "Apply image", options = {}) %>
+                  
+                  <% end %>
               <% end %>
               <br/>
-
-
   
 </div>
