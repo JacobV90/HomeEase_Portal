@@ -34,12 +34,21 @@ class ProfileController < ApplicationController
     property = Property.find(params[:prop_id])
     
     params[:applicants].each_pair do |key, value|
+      
       if(!property.tenants.exists?(:email => value[:email]))
         property.tenants.create!({first_name: value[:first_name], last_name: value[:last_name], email: value[:email],
         phone_number: value[:phone_number]})
+        
+        respond_to do |format|
+          format.json { render json: property.to_json }  # respond with the created JSON object
+        end
+        
       end
+    
     end
-
+    
+    
+    
   end
   
 end

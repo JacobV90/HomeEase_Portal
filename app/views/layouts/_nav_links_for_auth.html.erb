@@ -6,7 +6,19 @@
     <% end %>
     
   </li>
-    <li role="presentation"><a href="#">Messages <span class="badge">3</span></a>
+  
+  <li role="presentation">
+      <a href="#">Messages <span class="badge">3</span></a>
+  </li>
+  
+  <li>
+    <%= link_to dashboard_path do %> 
+         <%= content_tag :span, "", :class => "glyphicon glyphicon-th-list" %>
+         Notifications
+    <% end %>
+  </li>
+    
+
 <% end %>
   
 
