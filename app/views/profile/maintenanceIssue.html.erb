@@ -1,3 +1,8 @@
 <% content_for :side_content do %>
     <h1>Maintenance Issues page</h1>
+    <% (@issues).each do |issue| %>
+        <li>
+            <%= issue.to_s %>
+        </li>
+    <% end %>
 <% end %>
