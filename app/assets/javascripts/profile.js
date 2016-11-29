@@ -18,6 +18,4 @@ $(function () {
         //$('.absolute-wrapper').removeClass('slide-in');
 
     });
-    alert(gon.issues);
-    console.log(gon.issues);
 });
