@@ -16,6 +16,7 @@ class ProfileController < ApplicationController
   def maintenanceIssue
     puts "Maintenance was clicked"
     @issues = current_user.findIssues
+    gon.issues = @issues
     render "maintenanceIssue"
   end
   

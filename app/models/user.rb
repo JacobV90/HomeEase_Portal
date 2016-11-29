@@ -27,11 +27,17 @@ class User < ApplicationRecord
   end
   
   def findIssues
-    properties_id = properties.collect {|property| property.id}
-    raw_issues = properties_id.map {|prop_id| FIREBASE.get("MaintenanceIssues/prop_id:#{prop_id}").body}
+    raw_issues = properties.map do |prop|
+      prop_id = prop.id
+      issues = FIREBASE.get("MaintenanceIssues/prop_id:#{prop_id}").body
+      if not issues.nil?
+        issues = issues.drop(1)
+        issues.map {|issue| issue["property"] = prop}
+      end
+      issues
+    end
     relevent_issues = raw_issues.select {|issues| not issues.nil?}
-    relevent_issues.map! {|issues| issues.drop(1)}
-    relevent_issues.flatten!()
+    relevent_issues.flatten!
   end  
   
 end
