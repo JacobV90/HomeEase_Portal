@@ -311,7 +311,7 @@
   .side-body {
     margin-left: 5px;
     margin-top: 70px;
-    position: relative;
+    position: center;
     -moz-animation: bodyslideout 300ms forwards;
     -o-animation: bodyslideout 300ms forwards;
     -webkit-animation: bodyslideout 300ms forwards;
@@ -353,4 +353,19 @@
   #dropdown .panel-body .navbar-nav {
     margin: 0;
   }
+  
+  .outline {
+    border: 5px black;
+  }
+  .text-right {
+    text-align: right;
+  }
+  .text-left {
+    text-align: left;
+    padding: 5px;
+  }
+  
+
+
+
 }

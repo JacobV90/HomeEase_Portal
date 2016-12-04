@@ -1,6 +1,10 @@
+
 <!DOCTYPE html>
 <html>
   <head>
+   <script src= "https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.2.0/css/mdb.min.css"></script>
+    <script src= "https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.2.0/js/mdb.min.js"></script>
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= content_for?(:title) ? yield(:title) : "Rails Devise" %></title>
     <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Rails Devise" %>">
@@ -25,8 +29,12 @@
            <div class="side-menu">
          	  <%= render 'side_menu' %>
          	 </div>
-          <div class="side-body">
-  	       <%= yield :side_content%>
+    
+   
+          <div class="background_image">
+                <div class="container side-body">
+  	           <%= yield :side_content%>
+  	         </div>
   	      </div>
   	     </div>
 	   </main>

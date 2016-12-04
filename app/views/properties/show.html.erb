@@ -1,14 +1,34 @@
+
 <%content_for :side_content do %>
-    <%= render "banner" %>
-    <%= render partial: "property_widget", :locals => {property: @property} %>
-    <div class="btn-group" role="group" aria-label="Basic example">
-             
-             <%= button_to "Edit Property", {:controller => :properties,
-                 :action => 'edit', :id => @property.id }, :method => :get %> 
-             <%= button_to "Remove property",{:controller => :properties,
-                 :action => 'destroy', :id => @property.id }, :method => :delete %>        
-    </div>
-    <% (Tenant.where("property_id = '#{@property.id}'")).each do |tenant| %>
-                <%= render partial: "tenant_widget", :locals => {tenant: tenant} %>
+   <br><br><br>
+	<div class="row-fluid">
+      <h1 class="pull-center" align = "center"><strong>PROPERTIES</strong></h1>
+	</div>	
+  <br><br><br><br>
+  <div class="row-fluid">
+      	<div class="span12 block block-med offsetHalf1">
+      	  <br>
+              <%= render partial: "property_widget", :locals => {property: @property} %>
+          <br>
+        </div>
+
+  </div>  
+ 	
+  <br><br>
+  <div class="row-fluid">
+  	<div class="span12 block block-med offsetHalf1">
+      	  <br>
+      	   <h1 class="pull-center"><strong>Tenant Information</strong></h1>
+        <% (Tenant.where("property_id = '#{@property.id}'")).each do |tenant| %>
+                    <%= render partial: "tenant_widget", :locals => {tenant: tenant} %>
+        <% end %>      
+      </div>
+	</div>
+</div><!---/cont---->
+<br><br>
+<br><br>
+
+    <br><br><br>
+        
     <% end %>
-<% end %>
+

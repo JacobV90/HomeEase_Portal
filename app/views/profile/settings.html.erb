@@ -1,3 +1,5 @@
 <% content_for :side_content do %>
-    <%= button_to "Delete Account", remove_user_path(current_user.id), :method => :delete %>   
+<div class="container-fluid block block-sm">
+    <button class="btn btn-primary btn-flat"> <%= button_to "Delete Account", remove_user_path(current_user.id), :method => :delete %> </button>
+</div>
 <% end %>
