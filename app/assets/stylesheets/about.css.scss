@@ -1,4 +1,42 @@
 .pre-scrollable {
-    max-height: 600px;
+    max-height: 1000px;
     overflow-y: scroll;
+}
+
+
+.container-fluid { 
+  padding: 0px;
+}
+body {
+       width: 100%;
+       margin: 0%;    
+}
+
+.overview-image2 {
+  background-image: image-url('AboutSkyline.jpg');
+  min-height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  vertical-align: middle;
+}
+
+.overview-content2{
+  background-color: rgba(0,0,0,0.7);
+  float:none;
+  margin:0 auto;
+  font-size: 24px;
+  color: #ffffff;
+  width: 100%;
+  //margin-right: 60vh;
+  p{
+    text-align: center;
+  }
+}
+ 
+.vcenter2 {
+    height: 100vh;
+    display: flex;
+    align-items: center;
 }

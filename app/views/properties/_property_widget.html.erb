@@ -1,7 +1,16 @@
 
 <div class = "property-info">
-<div class = "property-view">
-            <%=image_tag ("#{property.id}" + '.png'), class: 'img-rounded img-responsive',alt: '',size: "400x400",align: 'left', id: 'example-id', style: 'padding-right: 10px'%>
+<div class = "property-view" >
+    <%=if FileTest.exist?("app/assets/images/#{property.id}" + '.png' )
+      image_check = image_tag ("#{property.id}" + '.png'),class: 'img-rounded img-responsive',alt: '',size: "400x400",align: 'left', id: 'example-id', style: 'padding-right: 10px'
+    else
+        if FileTest.exist?("app/assets/images/#{property.id}" + '.jpg' )
+            image_check = image_tag ("#{property.id}" + '.jpg'),class: 'img-rounded img-responsive',alt: '',size: "400x400",align: 'left', id: 'example-id', style: 'padding-right: 10px'
+        else
+            image_check = image_tag('house-icon.png',class: 'img-rounded img-responsive',alt: '',size: "400x400",align: 'left', id: 'example-id', style: 'padding-right: 10px')
+        end
+    end%>
+            
 </div>
               <p><b>Street: </b> <%= property.street %></p>
               <p><b>City: </b> <%= property.city %></p>
@@ -26,3 +35,4 @@
               <br/>
   
 </div>
+
