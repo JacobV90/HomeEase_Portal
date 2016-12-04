@@ -36,6 +36,30 @@
                  <td>Street:</td>
                  <td><%= property.street %></td>
               </tr>
+
+<div class = "property-view" >
+    <%=if FileTest.exist?("app/assets/images/#{property.id}" + '.png' )
+      image_check = image_tag ("#{property.id}" + '.png'),class: 'img-rounded img-responsive',alt: '',size: "400x400",align: 'left', id: 'example-id', style: 'padding-right: 10px'
+    else
+        if FileTest.exist?("app/assets/images/#{property.id}" + '.jpg' )
+            image_check = image_tag ("#{property.id}" + '.jpg'),class: 'img-rounded img-responsive',alt: '',size: "400x400",align: 'left', id: 'example-id', style: 'padding-right: 10px'
+        else
+            image_check = image_tag('house-icon.png',class: 'img-rounded img-responsive',alt: '',size: "400x400",align: 'left', id: 'example-id', style: 'padding-right: 10px')
+        end
+    end%>
+            
+</div>
+              <p><b>Street: </b> <%= property.street %></p>
+              <p><b>City: </b> <%= property.city %></p>
+              <p><b>State: </b> <%= property.state %></p>
+              <p><b>Zipcode: </b> <%= property.zipcode %></p>
+              <p><b>Price per month: </b><%= property.price %></p>
+              <p><b>Number of Bedrooms: </b><%= property.bedrooms %></p>
+              <p><b>Number of Bathrooms: </b><%= property.bathrooms %></p>
+              <p><b>Featured Amenities: </b><%= property.amenities %></p>
+              <p><b>Description: </b><%= property.description %></p>
+              <br/>
+
               
               <tr>
                  <td>City:</td>
@@ -99,3 +123,4 @@
              
   
 </div>
+
