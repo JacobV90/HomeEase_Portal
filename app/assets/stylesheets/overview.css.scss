@@ -8,7 +8,15 @@
   background-size: cover;
   vertical-align: middle;
 }
+.overview-image3 {
+  background-image: image-url('ListingBackground.jpg');
 
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  vertical-align: middle;
+}
 .overview-content{
   background-color: rgba(0,0,0,0.7);
   float:none;
