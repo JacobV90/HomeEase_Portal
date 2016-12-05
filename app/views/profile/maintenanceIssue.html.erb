@@ -1,7 +1,7 @@
 <% content_for :side_content do %>
     <div class="container-fluid block block-full">
         <h1>Maintenance Issues page</h1>
-        <table class="table table-hover table-responsive" id="issue_table">
+        <table class="table table-hover table-responsive text-black" id="issue_table">
             <caption class="hidden">notLoaded</caption>
             <thead>
                 <tr>
@@ -33,7 +33,7 @@
             issues = issueSort(gon.issues);
             issues.forEach(function (issue,index){
                 $('#issue_table').append(
-                    '<tr data-toggle="collapse" data-target="#issue' + index + '" class="'+ tr_class[issue.type] +'">\
+                    '<tr style = "color:black;" data-toggle="collapse" data-target="#issue' + index + '" class="'+ tr_class[issue.type] +'">\
                         <td><button class="btn btn-default btn-xs"><span class="glyphicon glyphicon-eye-open"></span></button></td>\
                         <td>' + issue.description + '</td>\
                         <td>' + issue.cost + '</td>\

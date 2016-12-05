@@ -5,15 +5,6 @@
   margin-right: 0;
   margin-left: 0;
 }
-@import "http://designmodo.github.io/Flat-UI/dist/css/flat-ui.min.css";
-@import "https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css";
-@import "https://daneden.github.io/animate.css/animate.min.css";
-
-// BACKGROUND COLOR
-@bg-color: #583e7e;
-
-// TEXT COLOR
-@text-color: #fff;
 /* 
     Sometimes the sub menus get too large for the page and prevent the menu from scrolling, limiting functionality
     A quick fix is to change .side-menu to 
@@ -167,7 +158,6 @@
   background-color: #f3f3f3;
   padding: 15px 18px;
 }
-
 /* Main body section */
 .side-body {
   margin-left: 310px;
@@ -321,7 +311,7 @@
   .side-body {
     margin-left: 5px;
     margin-top: 70px;
-    position: center;
+    position: relative;
     -moz-animation: bodyslideout 300ms forwards;
     -o-animation: bodyslideout 300ms forwards;
     -webkit-animation: bodyslideout 300ms forwards;
@@ -375,6 +365,11 @@
     padding: 5px;
   }
   
+
+ .text-black {
+   color: black;
+   
+ }
 
 
 
