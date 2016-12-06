@@ -21,7 +21,7 @@ class ProfileController < ApplicationController
   end
   
   def bank
-    puts "bank"
+    puts "Bank was clicked"
     render "bank"
   end
   

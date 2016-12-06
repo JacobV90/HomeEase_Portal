@@ -38,6 +38,6 @@ class User < ApplicationRecord
     end
     relevent_issues = raw_issues.select {|issues| not issues.nil?}
     relevent_issues.flatten!
-  end  
+  end
   
 end
