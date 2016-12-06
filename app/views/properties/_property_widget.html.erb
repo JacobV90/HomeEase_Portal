@@ -1,91 +1,75 @@
 
-
-<div class = "property-info">
-
-<div class = "property-view">
-    <div class= "col-md-4">
+<div class = container>
+        <div class= "col-md-6">
+            <div class="row">
+                  <div class = "property-view" >
+                    <%=if FileTest.exist?("app/assets/images/#{property.id}" + '.png' )
+                      image_check = image_tag ("#{property.id}" + '.png'),class: 'img-rounded img-responsive',alt: '',size: "400x400",align: 'left', id: 'example-id', style: 'padding-right: 10px'
+                    else
+                        if FileTest.exist?("app/assets/images/#{property.id}" + '.jpg' )
+                            image_check = image_tag ("#{property.id}" + '.jpg'),class: 'img-rounded img-responsive',alt: '',size: "400x400",align: 'left', id: 'example-id', style: 'padding-right: 10px'
+                    else
+                        image_check = image_tag('house-icon.png',class: 'img-rounded img-responsive image-set-size',alt: '',align: 'left', id: 'example-id', style: 'padding-right: 10px')
+                    end
+                    end%>
+                  </div>
+            </div>
+            <div class = "row">
+                <% if current_page?(controller: 'properties', action: 'show' )%>
+                    <%= form_tag( {action: :upload, id: property.id },multipart: true )do %>
+                       <div class = "col-md-3"><%= file_field_tag 'image' ,:class =>'btn btn-warning' %>
+                       <%= submit_tag(value = "Apply image", options = {}) %></div>
+                    <% end %>
+                <% end %>
+            </div>
+        </div>
+        
+        <div class="col-md-6" >
+            <div class="row">
+                <div class = "property-info">
+                    <table class = "table table-condensed" border = "2px black">
+                       <tbody>
+                          <tr>
+                             <td>Street:</td>
+                             <td><%= property.street %></td>
+                          </tr><tr>
+                             <td>City:</td>
+                             <td><%= property.city %></td>
+                          </tr><tr>
+                             <td>State:</td>
+                             <td><%= property.state %></td>
+                          </tr><tr>
+                             <td>Zipcode:</td>
+                             <td><%= property.zipcode %></td>
+                          </tr><tr>
+                             <td>Price per month:</td>
+                             <td><%= property.price %></td>
+                          </tr><tr>
+                             <td>Number of Bedrooms:</td>
+                             <td><%= property.bedrooms %></td>
+                          </tr><tr>
+                             <td>Number of Bathrooms:</td>
+                             <td><%= property.bathrooms %></td>
+                          </tr><tr>
+                             <td>Featured Amenities:</td>
+                             <td><%= property.amenities %></td>
+                          </tr><tr>
+                             <td>Description:</td>
+                             <td><%= property.description %></td>
+                          </tr>
+                       </tbody>
+                    </table>
+                </div>
+            </div>
         <div class="row">
-          <div class = "property-view" >
-            <%=if FileTest.exist?("app/assets/images/#{property.id}" + '.png' )
-              image_check = image_tag ("#{property.id}" + '.png'),class: 'img-rounded img-responsive',alt: '',size: "400x400",align: 'left', id: 'example-id', style: 'padding-right: 10px'
-            else
-                if FileTest.exist?("app/assets/images/#{property.id}" + '.jpg' )
-                    image_check = image_tag ("#{property.id}" + '.jpg'),class: 'img-rounded img-responsive',alt: '',size: "400x400",align: 'left', id: 'example-id', style: 'padding-right: 10px'
-            else
-                image_check = image_tag('house-icon.png',class: 'img-rounded img-responsive',alt: '',size: "400x400",align: 'left', id: 'example-id', style: 'padding-right: 10px')
-            end
-            end%>
-          </div>
-          
-    <% if current_page?(controller: 'properties', action: 'show' )%>
-        <div class = "row">
-            <%= button_to "Edit Property", {:controller => :properties,
-                 :action => 'edit', :id => @property.id }, :method => :get,:class => 'btn btn-primary' %>
-            <%= button_to "Remove property",{:controller => :properties,
-                 :action => 'destroy', :id => @property.id }, :method => :delete,:class =>'btn btn-danger' %> 
+            <% if current_page?(controller: 'properties', action: 'show' )%>
+                <div class = "col-md-3"><%= button_to "Edit Property", {:controller => :properties,
+                 :action => 'edit', :id => @property.id }, :method => :get,:class => 'btn btn-primary' %></div>
+                <div class = "col-md-3"><%= button_to "Remove property",{:controller => :properties,
+                 :action => 'destroy', :id => @property.id }, :method => :delete,:class =>'btn btn-danger' %></div> 
+            <% end %>
         </div>
-        
-        <div class = "row">
-           <%= form_tag( {action: :upload, id: property.id },multipart: true )do %>
-               <%= file_field_tag 'image' ,:class =>'btn btn-warning' %>
-               </br>
-                <%= submit_tag(value = "Apply image", options = {}) %>
-              <% end %>
-        </div>
-    <% end %>
     </div>
-        
-    </div>
-    <div class="col-md-6" >
-        <table class = "table table-condensed" border = "2px black">
-           <tbody>
-              <tr>
-                 <td>Street:</td>
-                 <td><%= property.street %></td>
-              </tr>
-              <tr>
-                 <td>City:</td>
-                 <td><%= property.city %></td>
-              </tr>
-              
-              <tr>
-                 <td>State:</td>
-                 <td><%= property.state %></td>
-              </tr>
-              
-              <tr>
-                 <td>Zipcode:</td>
-                 <td><%= property.zipcode %></td>
-              </tr>
-              
-              <tr>
-                 <td>Price per month:</td>
-                 <td><%= property.price %></td>
-              </tr>
-              <tr>
-                 <td>Number of Bedrooms:</td>
-                 <td><%= property.bedrooms %></td>
-              </tr>
-               <tr>
-                 <td>Number of Bathrooms:</td>
-                 <td><%= property.bathrooms %></td>
-              </tr>
-               <tr>
-                 <td>Featured Amenities:</td>
-                 <td><%= property.amenities %></td>
-              </tr>
-               <tr>
-                 <td>Description:</td>
-                 <td><%= property.description %></td>
-              </tr>
-           </tbody>
-        	
-        </table>
-        
-    </div>
-   
 </div>
-             
-  
-</div>
+
 

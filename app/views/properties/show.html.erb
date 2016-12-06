@@ -1,23 +1,24 @@
 
 <%content_for :side_content do %>
-  <div class="container-fluid block block-full">
+  <div class="block block-full">
     <h1 class="pull-center" align = "center"><strong>PROPERTIES</strong></h1>
-  <br><br>
-  <div class="row">
+  <br>
+  <div class = "row-fluid">
       	  <br>
               <%= render partial: "property_widget", :locals => {property: @property} %>
           <br>
   </div>  
  	
-  <br><br>
-  <div class="row">
-      	  <br>
-      	   <h1 class="pull-center" align = "center"><strong>Tenant Information</strong></h1>
+  <br><hr><br>
+  <div class = "row-fluid">
+      	<h1 class="pull-center" align = "center"><strong>Tenant Information</strong></h1>
+  </div>    
+      	<br>
+  <div class = "row-fluid">
         <% (Tenant.where("property_id = '#{@property.id}'")).each do |tenant| %>
                     <%= render partial: "tenant_widget", :locals => {tenant: tenant} %>
         <% end %>      
   </div>
-  <br><br>
-
+<br><br>
 </div>
     <% end %>
