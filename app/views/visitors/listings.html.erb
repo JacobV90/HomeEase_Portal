@@ -1,8 +1,14 @@
-<div class = "overview-image3">
+<div class = "bg-primary">
+    <h1 align="center"> Property Listings </h1>
+    <div class = "bg-info" style="height:30px;" ></div>
+    <br clear="all" /> 
+    <br clear="all" /> 
 <% (Property.all).each do |property| %>
+
     <%=  render partial: "properties/property_widget", :locals => {property: property} %>
    <!-- <div class="test" background="HomeeaseSkyline.jpg">  </div> -->
-    <br clear="all" />
+    <br clear="all" /> 
+    
 <% end %>
 </div>
    
