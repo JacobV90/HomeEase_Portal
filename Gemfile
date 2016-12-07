@@ -13,6 +13,7 @@ gem 'firebase'
 gem "haml-rails"
 gem 'bootstrap_form'
 gem 'paperclip'
+gem 'gon'
 
 group :production do 
   gem "pg"

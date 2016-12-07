@@ -15,11 +15,13 @@ class ProfileController < ApplicationController
    
   def maintenanceIssue
     puts "Maintenance was clicked"
+    @issues = current_user.findIssues
+    gon.issues = @issues
     render "maintenanceIssue"
   end
   
   def bank
-    puts "bank"
+    puts "Bank was clicked"
     render "bank"
   end
   

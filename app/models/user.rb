@@ -26,4 +26,18 @@ class User < ApplicationRecord
     FIREBASE.delete("Owners/#{self.id}")
   end
   
+  def findIssues
+    raw_issues = properties.map do |prop|
+      prop_id = prop.id
+      issues = FIREBASE.get("MaintenanceIssues/prop_id:#{prop_id}").body
+      if not issues.nil?
+        issues = issues.drop(1)
+        issues.map {|issue| issue["property"] = prop}
+      end
+      issues
+    end
+    relevent_issues = raw_issues.select {|issues| not issues.nil?}
+    relevent_issues.flatten!
+  end
+  
 end

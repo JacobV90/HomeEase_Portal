@@ -18,5 +18,4 @@ $(function () {
         //$('.absolute-wrapper').removeClass('slide-in');
 
     });
-    
 });

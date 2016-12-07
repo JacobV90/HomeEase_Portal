@@ -1,5 +1,85 @@
 <% content_for :side_content do%>
-  <h3>Richards page for bank information</h3> 
-  <%= button_to "Test Firebase", :action => "create" %>
-  <h3>hello bank</h3> 
+    <div class=" block block-full">
+        <h1>Transaction History</h1>
+        <table class="table table-hover table-responsive text-black" id="transaction_table">
+            <caption class="hidden">notLoaded</caption>
+            <thead>
+                <tr>
+                    <th>&nbsp;</th>
+                    <th>Date</th>
+                    <th>Unit</th>
+                    <th>Amount</th>
+                    <th>Memo</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>> 
+    </div>
+    <script>
+        var tr_class = {
+            "negative": "danger",
+            "positive" : "success"
+        }
+        var mock_transactions = [
+            {
+                "type": "positive",
+                "date": "10/1/2016",
+                "unit": "29 West Burlington St, Apt 5",
+                "amount": "$500.00",
+                "memo": "rent"
+            },
+            {
+                "type": "positive",
+                "date": "10/1/2016",
+                "unit": "101 Washington Ave",
+                "amount": "$650.00",
+                "memo": "rent"
+            },
+            {
+                "type": "positive",
+                "date": "11/1/2016",
+                "unit": "500 South Gilbert, Apt 213",
+                "amount": "$750.00",
+                "memo": "rent"
+            },
+            {
+                "type": "negative",
+                "date": "11/16/2016",
+                "unit": "500 South Gilbert, Apt 213",
+                "amount": "-$50.00",
+                "memo": "overpaid"
+            },
+            {
+                "type": "positive",
+                "date": "12/1/2016",
+                "unit": "29 West Burlington St, Apt 5",
+                "amount": "$500.00",
+                "memo": "rent"
+            }
+        ];
+        function transactionSort(unsortedTransactions){
+            return unsortedTransactions.sort(function(a, b){return Date.parse(b.date)-Date.parse(a.date)});
+        }
+        if ($("#transaction_table")[0].caption.innerHTML!="Loaded"){
+            $("#transaction_table")[0].caption.innerHTML = "Loaded";
+            transactions = transactionSort(mock_transactions);
+            transactions.forEach(function (transaction,index){
+                $('#transaction_table').append(
+                    '<tr style = "color:black;" data-toggle="collapse" data-target="#transaction' + index + '" class="'+ tr_class[transaction.type] +'">\
+                        <td><button class="btn btn-default btn-xs"><span class="glyphicon glyphicon-eye-open"></span></button></td>\
+                        <td>' + transaction.date + '</td>\
+                        <td>' + transaction.unit + '</td>\
+                        <td>' + transaction.amount + '</td>\
+                        <td>' + transaction.memo + '</td>\
+                    </tr>\
+                    <tr id="transaction' + index + '" class="collapse">\
+                        <td colspan = "4"><div>' +
+                        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum." +
+                        '</div></td>\
+                    </tr>'
+                );
+            });
+        }
+    </script>
 <% end %>
