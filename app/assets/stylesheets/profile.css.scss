@@ -37,8 +37,8 @@
   position: fixed;
   width: 300px;
   height: 100%;
-  background-color: #f8f8f8;
-  border-right: 1px solid #e7e7e7;
+  background-color:  #ecf0f1;  //this changes the color of the space under navbar
+ // border-right: 1px solid #444444;
 }
 
 .side-menu .navbar {
@@ -372,7 +372,7 @@
  }
  .image_padding {
    margin-top:10%;
-   height:400px;
+   height:auto;
    width:400px;
    
  }

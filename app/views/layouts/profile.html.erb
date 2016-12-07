@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
    <script src= "https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.2.0/css/mdb.min.css"></script>
     <script src= "https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.2.0/js/mdb.min.js"></script>
 
@@ -23,19 +24,27 @@
       <%= render 'layouts/navigation' %>
     </header>
     <main role="main">
-       <div class='notifications top-left'></div>
-       <%= render 'layouts/messages' %>
+        <div class="container-fluid container-responsive background_image" height = "100vh">
+       <div class='notifications top-left'>
+           <%= render 'layouts/messages' %>
+       </div>
          <div class="row">
            <div class="side-menu">
          	  <%= render 'side_menu' %>
-         	 </div>
+           </div>
     
    
-          <div class="background_image" height = "100vh">
-             <div class="container-fluid side-body">
-  	           <%= yield :side_content%>
+          
+             <div class="container-fluid side-body ">
+                 <div class = "container-responsive">
+                     <div class = 'block block-outer'>
+                         <br>
+  	                   <%= yield :side_content%>
+  	                   <br>
+  	                   </div>
+  	             </div>
   	         </div>
-  	      </div>
+  	     </div>
   	     </div>
 	   </main>
   </body>
