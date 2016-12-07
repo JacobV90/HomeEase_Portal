@@ -7,11 +7,26 @@ class ProfileController < ApplicationController
   def tenant_params
        params.permit(:tenants)
   end
-  
+  def update
+     #redirect_to root_path
+    puts "update happening"
+    #@current = current_user
+    #render "update"
+  end
+  def profile_update
+         puts "this happening"
+          @user = User.find(current_user.id)
+        @user.update(first_name: params[:first_name], last_name: params[:last_name],phone_number: params[:phone_number],email: params[:email]) 
+        
+         redirect_to dashboard_path
+        #redirect_to dashboard_path
+  end
   def dashboard
      @properties = Property.all
      @current = current_user
+
   end
+  
    
   def maintenanceIssue
     puts "Maintenance was clicked"
