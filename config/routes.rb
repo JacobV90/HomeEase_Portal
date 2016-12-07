@@ -13,6 +13,8 @@ Rails.application.routes.draw do
     get 'about', on: :member
   end
   
+  post 'user_state', to: 'visitors#user_state'
+
   resources :profile 
 
   get 'maintenanceIssue', to: 'profile#maintenanceIssue'

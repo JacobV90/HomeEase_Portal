@@ -1,3 +1,15 @@
 <% content_for :side_content do %>
-    <%= button_to "Delete Account", remove_user_path(current_user.id), :method => :delete %>   
+<div class="container-fluid block">
+    <br>
+    <hr>
+    <div class = 'col-med-4 text-center'>
+        <%= button_to "Delete Account", remove_user_path(current_user.id), :method => :delete,:class =>'btn btn-danger' %>
+    </div>
+   <hr>
+   <div class = 'col-med-4 text-center'>
+        PUT AN EDIT ACCOUNT BUTTON!
+    </div>
+   <hr>
+   <br>
+</div>
 <% end %>

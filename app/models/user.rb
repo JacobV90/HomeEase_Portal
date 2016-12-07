@@ -13,6 +13,7 @@ class User < ApplicationRecord
     puts "sending user to firebase"
     FIREBASE.update("",{
       "Owners/#{self.id}" => {
+        :owner_id => self.id,
         :first_name => self.first_name,
         :last_name => self.last_name,
         :email => self.email,
@@ -23,6 +24,20 @@ class User < ApplicationRecord
   
   def delete_from_firebase
     FIREBASE.delete("Owners/#{self.id}")
+  end
+  
+  def findIssues
+    raw_issues = properties.map do |prop|
+      prop_id = prop.id
+      issues = FIREBASE.get("MaintenanceIssues/prop_id:#{prop_id}").body
+      if not issues.nil?
+        issues = issues.drop(1)
+        issues.map {|issue| issue["property"] = prop}
+      end
+      issues
+    end
+    relevent_issues = raw_issues.select {|issues| not issues.nil?}
+    relevent_issues.flatten!
   end
   
 end

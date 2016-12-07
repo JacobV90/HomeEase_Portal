@@ -15,11 +15,13 @@ class ProfileController < ApplicationController
    
   def maintenanceIssue
     puts "Maintenance was clicked"
+    @issues = current_user.findIssues
+    gon.issues = @issues
     render "maintenanceIssue"
   end
   
   def bank
-    puts "bank"
+    puts "Bank was clicked"
     render "bank"
   end
   
@@ -30,16 +32,25 @@ class ProfileController < ApplicationController
   
   #response to tenant adding property to their favorites
   def notifications
-    property = Property.find(params[:prop_id])
-    email = params[:tenants][:email]
-    first = params[:tenants][:first_name]
-    last = params[:tenants][:last_name]
     
-    if !email.equal?("")
-      property.tenants.create!({first_name: first, last_name: last, email: email})
+    property = Property.find(params[:prop_id])
+    
+    params[:applicants].each_pair do |key, value|
+      
+      if(!property.tenants.exists?(:email => value[:email]))
+        property.tenants.create!({first_name: value[:first_name], last_name: value[:last_name], email: value[:email],
+        phone_number: value[:phone_number]})
+        
+        respond_to do |format|
+          format.json { render json: property.to_json }  # respond with the created JSON object
+        end
+        
+      end
+    
     end
     
+    
+    
   end
-  
   
 end

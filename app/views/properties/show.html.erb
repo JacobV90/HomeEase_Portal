@@ -1,14 +1,45 @@
+
 <%content_for :side_content do %>
-    <%= render "banner" %>
-    <%= render partial: "property_widget", :locals => {property: @property} %>
-    <div class="btn-group" role="group" aria-label="Basic example">
-             
-             <%= button_to "Edit Property", {:controller => :properties,
-                 :action => 'edit', :id => @property.id }, :method => :get %> 
-             <%= button_to "Remove property",{:controller => :properties,
-                 :action => 'destroy', :id => @property.id }, :method => :delete %>        
-    </div>
-    <% (Tenant.where("property_id = '#{@property.id}'")).each do |tenant| %>
-                <%= render partial: "tenant_widget", :locals => {tenant: tenant} %>
-    <% end %>
+<div class = container-fluid> 
+  <div class="block">
+    <br>
+    <h1 class="pull-center" align = "center"><strong>Property Information</strong></h1>
+    <hr>
+    <br>
+    <div class = "row-fluid">
+      	  <br>
+              <%= render partial: "property_widget", :locals => {property: @property} %>
+          <br>
+    </div>  
+ 	</div>
+  
+<div class="block">
+  <div class = "row-fluid">
+        <br>
+      	<h1 class="pull-center" align = "center"><strong>Applicant Information</strong></h1>
+      	<hr><br>
+  </div>    
+        <% (Tenant.where("property_id = '#{@property.id}'")).each do |tenant| %>
+        <div class = "row-fluid">
+                    <%= render partial: "tenant_widget", :locals => {tenant: tenant} %>
+                    <hr>
+        </div>
+        <% end %>   
+  </div>
+  
+  <div class="block">
+  <div class = "row-fluid">
+        <br>
+      	<h1 class="pull-center" align = "center"><strong>Resident Information</strong></h1>
+      	<hr><br>
+  </div>    
+        <% (Tenant.where("property_id = '#{@property.id}'")).each do |tenant| %>
+        <div class = "row-fluid">
+                    <%= render partial: "tenant_widget", :locals => {tenant: tenant} %>
+                    <hr>
+        </div>
+        <% end %>   
+  </div>
+  <br><br>
+  </div>
 <% end %>

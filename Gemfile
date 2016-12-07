@@ -13,6 +13,7 @@ gem 'firebase'
 gem "haml-rails"
 gem 'bootstrap_form'
 gem 'paperclip'
+gem 'gon'
 
 group :production do 
   gem "pg"
@@ -22,22 +23,27 @@ group :development, :test do
   gem 'sqlite3'
   gem 'byebug', platform: :mri
 end
+
 group :development do
   gem 'web-console'
   gem 'listen', '~> 3.0.5'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
+
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'bootstrap-sass'
+gem 'bootstrap-growl-rails'
 gem 'scrollify'
 gem 'devise'
 gem 'high_voltage'
+
 group :development do
   gem 'better_errors'
   gem 'rails_layout'
   gem 'spring-commands-rspec'
 end
+
 group :development, :test do
   gem 'factory_girl_rails'
   gem 'faker'
@@ -47,6 +53,7 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'simplecov', :require => false, :group => :test
 end
+
 group :test do
   gem 'capybara'
   gem 'database_cleaner'

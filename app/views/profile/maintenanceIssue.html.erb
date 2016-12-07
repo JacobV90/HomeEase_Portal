@@ -1,3 +1,53 @@
 <% content_for :side_content do %>
-    <h1>Maintenance Issues page</h1>
+    <div class=" block">
+        <h1>Maintenance Issues page</h1>
+        <table class="table table-hover table-responsive" id="issue_table">
+            <caption class="hidden">notLoaded</caption>
+            <thead>
+                <tr>
+                    <th>&nbsp;</th>
+                    <th>Description</th>
+                    <th>Cost</th>
+                    <th>Unit</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        <br>
+        <h4>We need to make sure that we have a way to remove these maintenance listings once completed</h4><br><br>
+    </div>
+    <script>
+        var tr_class = {
+            "high": "danger",
+            "medium": "warning",
+            "low" : "success"
+        }
+        function issueSort(unsortedIssues){
+            var type_value = {
+                "high": 1,
+                "medium": 2,
+                "low" : 3
+            }
+            return unsortedIssues.sort(function(a, b){return type_value[a.type]-type_value[b.type]})
+        }
+        if ($("#issue_table")[0].caption.innerHTML!="Loaded"){
+            $("#issue_table")[0].caption.innerHTML = "Loaded";
+            issues = issueSort(gon.issues);
+            issues.forEach(function (issue,index){
+                $('#issue_table').append(
+                    '<tr style = "color:black;" data-toggle="collapse" data-target="#issue' + index + '" class="'+ tr_class[issue.type] +'">\
+                        <td><button class="btn btn-default btn-xs"><span class="glyphicon glyphicon-eye-open"></span></button></td>\
+                        <td>' + issue.description + '</td>\
+                        <td>' + issue.cost + '</td>\
+                        <td>' + issue.property.street + '</td>\
+                    </tr>\
+                    <tr id="issue' + index + '" class="collapse">\
+                        <td colspan = "4"><div>' +
+                        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum." +
+                        '</div></td>\
+                    </tr>');
+            });
+        }
+    </script>
 <% end %>

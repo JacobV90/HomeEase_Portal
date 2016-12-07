@@ -29,12 +29,15 @@ class Property < ApplicationRecord
                 :amenities => self.amenities,
                 :tenants => "",
                 :owner => {
+                    :owner_id => self.user.id,
                     :first_name => self.user.first_name,
                     :last_name => self.user.last_name,
                     :email => self.user.email
-                }
+                },
+                :prop_id => self.id
             },
             "Owners/#{self.user.id.to_s}/properties/#{self.id.to_s}" => {
+                :owner_id => self.id,
                 :street => self.street, 
                 :city => self.city,
                 :state => self.state,
