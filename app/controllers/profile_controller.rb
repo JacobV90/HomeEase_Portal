@@ -16,11 +16,21 @@ class ProfileController < ApplicationController
   def profile_update
          puts "this happening"
           @user = User.find(current_user.id)
-        @user.update(first_name: params[:first_name], last_name: params[:last_name],phone_number: params[:phone_number],email: params[:email]) 
+        @user.update(first_name: params[:first_name], last_name: params[:last_name],phone_number: params[:phone_number],email: params[:email],business_address: params[:business_address],business_name: params[:business_name], business_email: params[:business_email], business_phone_number: params[:business_phone_number])
         
          redirect_to dashboard_path
-        #redirect_to dashboard_path
+        #redirect_to dashboard_pat
   end
+  
+  def upload
+    uploaded_io = params[:image]
+    puts Dir.pwd
+    File.open(Rails.root.join('app', 'assets/images', (params[:id] + '69.png') ), 'wb') do |file|
+      file.write(uploaded_io.read)
+    end
+    redirect_to :back
+  end
+  
   def dashboard
      @properties = Property.all
      @current = current_user

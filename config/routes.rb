@@ -24,6 +24,7 @@ Rails.application.routes.draw do
   get 'settings', to: 'profile#settings'
   get 'update', to: 'profile#update'
   put 'profile_update', to: 'profile#'
+  post 'upload', to: 'profile#'
   #post 'edit_profile', to: 'profile#dashboard'
   #used for firebase notifications - doesnt render ui
   post 'notifications', to: 'profile#notifications' 

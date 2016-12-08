@@ -1,13 +1,14 @@
 <% content_for :side_content do %>
     <%= bootstrap_form_tag(url: profile_update_path , method: "put") do |f| %>
-     <%= f.text_field :first_name  %>
-      <%= f.text_field :last_name %>
-      <%= f.text_field :phone_number%>
-      <%= f.text_field :email%>
-      <%= f.text_field :business_name %>
-      <%= f.text_field :business_address %>
-      <%= f.text_field :business_email %>
-      <%= f.text_field :business_phone_number%>
-      <%= f.submit "Edit property" %>
+     <%= f.text_field :first_name, :value => current_user.first_name %>
+      <%= f.text_field :last_name, :value => current_user.last_name%>
+      <%= f.number_field :phone_number, :value => current_user.phone_number%>
+      <%= f.text_field :email, :value => current_user.email%>
+      <%= f.text_field :business_name, :value => current_user.business_name %>
+      <%= f.text_field :business_address, :value => current_user.business_address %>
+      <%= f.text_field :business_email, :value => current_user.business_email %>
+      <%= f.number_field :business_phone_number, :value => current_user.business_phone_number%>
+                   
+      <%= f.submit "Submit" %>
    <% end %>
 <%end%> 

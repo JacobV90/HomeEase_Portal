@@ -2,8 +2,23 @@
       	 <div class = "container-fluid">
       	  <br>
                 <div class="col-md-4">
-                    <img src="http://www.mchail.org/images/mchail/default.png"  class="img-rounded img-responsive image_padding" />
-                    <p>We need to add buttons here or on settings -> edit profile for setting/changing picture</p>
+                    <br><br>
+                    
+                    <%=if FileTest.exist?("app/assets/images/#{current_user.id}" + '69.png' )
+                      image_check = image_tag ("#{current_user.id}" + '69.png'),class: 'img-rounded img-responsive image_padding',alt: '',size: "400x400",align: 'left', id: 'example-id', style: 'padding-right: 10px'
+                    else
+                        if FileTest.exist?("app/assets/image/#{current_user.id}" + '69.jpg' )
+                            image_check = image_tag ("#{current_user.id}" + '69.jpg'),class: 'img-rounded img-responsive image_padding',alt: '',size: "400x400",align: 'left', id: 'example-id', style: 'padding-right: 10px'
+                    else
+                        image_check = image_tag("http://www.mchail.org/images/mchail/default.png",class: 'img-rounded img-responsive image_padding',alt: '',align: 'left', id: 'example-id', style: 'padding-right: 10px')
+                    end
+                    end%>
+                    
+                     <%= form_tag( {controller: :profile, action: :upload, id: current_user.id },multipart: true  ,:class =>'btn btn-flat')do %>
+                       <div class = "col-md-3 col-responsive" ><%= file_field_tag 'image' %><%= submit_tag(value = "Apply image", options = {}) %></div>
+                       
+                    <% end %>
+                    
                 </div>
                 <div class="col-md-8">
                     <h3>
@@ -20,13 +35,13 @@
                     <h4 text-align = "center">Business Information</h4>
                     <hr>
                     <p>
-                        <i class="glyphicon glyphicon-asterisk"></i> Business name 
+                        <i class="glyphicon glyphicon-home"></i> <%= current_user.business_name %> 
                         <br />
-                        <i class="glyphicon glyphicon-asterisk"></i> Business Address 
+                        <i class="glyphicon glyphicon-road"></i> <%= current_user.business_address %> 
                         <br />
-                        <i class="glyphicon glyphicon-earphone"></i> Business Phone number 
+                        <i class="glyphicon glyphicon-phone-alt"></i> <%= current_user.business_phone_number %> 
                         <br />
-                        <i class="glyphicon glyphicon-envelope"></i> Business Email </p>
+                        <i class="glyphicon glyphicon-envelope"></i> <%= current_user.business_email %></p>
                 </div>
           <br>
         </div>
