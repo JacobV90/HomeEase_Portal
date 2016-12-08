@@ -1,45 +1,47 @@
 
 <%content_for :side_content do %>
-<div class = container-fluid> 
-  <div class="block">
-    <br>
-    <h1 class="pull-center" align = "center"><strong>Property Information</strong></h1>
-    <hr>
-    <br>
+<div class = container-fluid>
     <div class = "row-fluid">
+       <div class="block">
+      <br>
+        <h1 style = 'padding-left:5%' >Property<small><b>  ~<%= @property.street %></b></small></h1>
+      <hr>
+      <br>
       	  <br>
               <%= render partial: "property_widget", :locals => {property: @property} %>
           <br>
     </div>  
  	</div>
   
-<div class="block">
+
   <div class = "row-fluid">
+    <div class="block">
         <br>
-      	<h1 class="pull-center" align = "center"><strong>Applicant Information</strong></h1>
+      	<h1 style = 'padding-left:5%'>Applicants</h1>
       	<hr><br>
-  </div>    
+     
         <% (Tenant.where("property_id = '#{@property.id}'")).each do |tenant| %>
         <div class = "row-fluid">
                     <%= render partial: "tenant_widget", :locals => {:tenant => tenant, :property => @property} %>
                     <hr>
         </div>
-        <% end %>   
+        <% end %> 
+        </div> 
   </div>
+
+
+  <div class = "row-fluid">
+    <div class="block">
+        <br>
+      	<h1 style = 'padding-left:5%'>Residents </h1>
+      	<hr><br>
+     
+        <% (Tenant.where("property_id = '#{@property.id}'")).each do |tenant| %>
+        <div class = "row-fluid">
+                    <%= render partial: "tenant_widget", :locals => {:tenant => tenant, :property => @property} %>
+                    <hr>
+        </div>
+        <% end %> 
+        </div> 
   
-  <div class="block">
-  <div class = "row-fluid">
-        <br>
-      	<h1 class="pull-center" align = "center"><strong>Resident Information</strong></h1>
-      	<hr><br>
-  </div>    
-        <% (Tenant.where("property_id = '#{@property.id}'")).each do |tenant| %>
-        <div class = "row-fluid">
-                    <%= render partial: "tenant_widget", :locals => {:tenant => tenant, :property => @property} %>
-                    <hr>
-        </div>
-        <% end %>   
-  </div>
-  <br><br>
-  </div>
 <% end %>
