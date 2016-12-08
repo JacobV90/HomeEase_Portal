@@ -24,8 +24,9 @@ Rails.application.routes.draw do
   
   #used for firebase notifications - doesnt render ui
   post 'notifications', to: 'profile#notifications' 
-  
+
   resources :properties
   post 'create_property', to: 'properties#create'
   post 'upload', to: 'properties#'
+
 end

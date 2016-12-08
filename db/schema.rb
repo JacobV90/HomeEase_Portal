@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(version: 20161117064400) do
     t.string  "last_name"
     t.string  "email"
     t.string  "phone_number"
+    t.string  "picture"
     t.index ["property_id"], name: "index_tenants_on_property_id"
   end
 
@@ -55,6 +56,7 @@ ActiveRecord::Schema.define(version: 20161117064400) do
     t.string   "first_name"
     t.string   "last_name"
     t.string   "phone_number"
+    t.string   "owner_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.index ["email"], name: "index_users_on_email", unique: true

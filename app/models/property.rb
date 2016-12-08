@@ -14,8 +14,7 @@ class Property < ApplicationRecord
   
   def send_to_firebase
     
-       FIREBASE.update("",{
-            "Properties/#{self.id.to_s}" => {   
+       response = FIREBASE.push("Properties/",{
                 :street => self.street, 
                 :city => self.city,
                 :state => self.state,
@@ -29,15 +28,19 @@ class Property < ApplicationRecord
                 :amenities => self.amenities,
                 :tenants => "",
                 :owner => {
-                    :owner_id => self.user.id,
+                    :owner_id => self.user.owner_id,
                     :first_name => self.user.first_name,
                     :last_name => self.user.last_name,
                     :email => self.user.email
                 },
                 :prop_id => self.id
-            },
-            "Owners/#{self.user.id.to_s}/properties/#{self.id.to_s}" => {
-                :owner_id => self.id,
+            });
+       
+        data = JSON.parse(response.body.to_json)
+        puts response.success?
+        response = FIREBASE.update("Owners/#{self.user.owner_id.to_s}/properties/",{
+            "#{data['name']}"=>{
+                :owner_id => self.user.owner_id,
                 :street => self.street, 
                 :city => self.city,
                 :state => self.state,
@@ -47,8 +50,10 @@ class Property < ApplicationRecord
                 :bathrooms => self.bathrooms,
                 :description => self.description,
                 :amenities => self.amenities,
-                } 
-        })
+                :prop_id => self.id
+        }
+        });
+        puts response.success?
      
   end
   

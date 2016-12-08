@@ -21,10 +21,12 @@ var fire = {
 
 	// watch for property changes from client side app
 	applicants_watch: function(response) {
-		console.log("watching applicants for owner# " + response.id);
-		var ref = firebase.database().ref('Owners/' + response.id + '/properties');
+		console.log("watching applicants for owner# " + response.owner_id);
+		var ref = firebase.database().ref('Owners/' + response.owner_id + '/properties');
 		ref.on('child_changed', function(snapshot) {
-			notifyAndUpdate(snapshot.key, snapshot.val());
+			console.log("updating");
+			console.log(snapshot.val().prop_id);
+			notifyAndUpdate(snapshot.val().prop_id, snapshot.val());
 		});
 	},
 
@@ -48,6 +50,12 @@ var fire = {
 		}
 	}
 };
+
+function approve_applicant(property, applicant){
+	console.log("approve_applicant");
+	console.log(property);
+	console.log(applicant);
+}
 
 function notifyAndUpdate(id, property) {
 	$.ajax({

@@ -21,7 +21,7 @@
   </div>    
         <% (Tenant.where("property_id = '#{@property.id}'")).each do |tenant| %>
         <div class = "row-fluid">
-                    <%= render partial: "tenant_widget", :locals => {tenant: tenant} %>
+                    <%= render partial: "tenant_widget", :locals => {:tenant => tenant, :property => @property} %>
                     <hr>
         </div>
         <% end %>   
@@ -35,7 +35,7 @@
   </div>    
         <% (Tenant.where("property_id = '#{@property.id}'")).each do |tenant| %>
         <div class = "row-fluid">
-                    <%= render partial: "tenant_widget", :locals => {tenant: tenant} %>
+                    <%= render partial: "tenant_widget", :locals => {:tenant => tenant, :property => @property} %>
                     <hr>
         </div>
         <% end %>   

@@ -39,7 +39,7 @@ class ProfileController < ApplicationController
       
       if(!property.tenants.exists?(:email => value[:email]))
         property.tenants.create!({first_name: value[:first_name], last_name: value[:last_name], email: value[:email],
-        phone_number: value[:phone_number]})
+        phone_number: value[:phone_number], picture: value[:picture]})
         
         respond_to do |format|
           format.json { render json: property.to_json }  # respond with the created JSON object
