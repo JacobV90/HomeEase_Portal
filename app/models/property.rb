@@ -33,7 +33,8 @@ class Property < ApplicationRecord
                     :last_name => self.user.last_name,
                     :email => self.user.email
                 },
-                :prop_id => self.id
+                :prop_id => self.id,
+                :picture => "https://firebasestorage.googleapis.com/v0/b/home-ease.appspot.com/o/modern-home.jpg?alt=media&token=aade151d-b45a-4f5e-a621-acf09602d429"
             });
        
         data = JSON.parse(response.body.to_json)
@@ -50,7 +51,8 @@ class Property < ApplicationRecord
                 :bathrooms => self.bathrooms,
                 :description => self.description,
                 :amenities => self.amenities,
-                :prop_id => self.id
+                :prop_id => self.id,
+                :picture => "https://firebasestorage.googleapis.com/v0/b/home-ease.appspot.com/o/modern-home.jpg?alt=media&token=aade151d-b45a-4f5e-a621-acf09602d429"
         }
         });
         puts response.success?
