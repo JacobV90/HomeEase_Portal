@@ -28,20 +28,5 @@
         <% end %> 
         </div> 
   </div>
-
-
-  <div class = "row-fluid">
-    <div class="block">
-        <br>
-      	<h1 style = 'padding-left:5%'>Residents </h1>
-      	<hr><br>
-     
-        <% (Tenant.where("property_id = '#{@property.id}'")).each do |tenant| %>
-        <div class = "row-fluid">
-                    <%= render partial: "tenant_widget", :locals => {:tenant => tenant, :property => @property} %>
-                    <hr>
-        </div>
-        <% end %> 
-        </div> 
   
 <% end %>
