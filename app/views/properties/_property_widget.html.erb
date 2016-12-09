@@ -1,33 +1,17 @@
 
-<div class = container>
-        <div class= "col-md-6">
-            <div class="row">
+<div class = container-fluid>
+    <div class="row-fluid">
+        <div class= "col-md-4 col-responsive">
                   <div class = "property-view" >
-                    <%=if FileTest.exist?("app/assets/images/#{property.id}" + '.png' )
-                      image_check = image_tag ("#{property.id}" + '.png'),class: 'img-rounded img-responsive',alt: '',size: "400x400",align: 'left', id: 'example-id', style: 'padding-right: 10px'
-                    else
-                        if FileTest.exist?("app/assets/images/#{property.id}" + '.jpg' )
-                            image_check = image_tag ("#{property.id}" + '.jpg'),class: 'img-rounded img-responsive',alt: '',size: "400x400",align: 'left', id: 'example-id', style: 'padding-right: 10px'
-                    else
-                        image_check = image_tag('house-icon.png',class: 'img-rounded img-responsive image-set-size',alt: '',align: 'left', id: 'example-id', style: 'padding-right: 10px')
-                    end
-                    end%>
-                  </div>
+                    <%= image_tag('https://firebasestorage.googleapis.com/v0/b/home-ease.appspot.com/o/modern-home.jpg?alt=media&token=aade151d-b45a-4f5e-a621-acf09602d429',class: 'img-rounded img-responsive image-set-size',alt: '',align: 'left', id: 'example-id', style: 'padding-right: 10px; width: 100%') %>
+                    <div>
             </div>
-            <div class = "row">
-                <% if current_page?(controller: 'properties', action: 'show' )%>
-                    <%= form_tag( {action: :upload, id: property.id },multipart: true  ,:class =>'btn btn-info')do %>
-                       <div class = "col-md-3" style="color:black;" ><%= file_field_tag 'image' %>
-                       <%= submit_tag(value = "Apply image", options = {}) %></div>
-                    <% end %>
-                <% end %>
+             </div>
             </div>
-        </div>
-        
-        <div class="col-md-6" >
-            <div class="row">
+            
+        <div class="col-md-8 col-responsive" >
                 <div class = "property-info">
-                    <table class = "table">
+                    <table class = "table table-responsive">
                        <tbody>
                           <tr>
                              <td>Street:</td>
@@ -60,12 +44,10 @@
                        </tbody>
                     </table>
                 </div>
-            </div>
-        <div class="row">
             <% if current_page?(controller: 'properties', action: 'show' )%>
-                <div class = "col-md-3"><%= button_to "Edit Property", {:controller => :properties,
+                <div class = "col-md-3 col-responsive"><%= button_to "Edit Property", {:controller => :properties,
                  :action => 'edit', :id => @property.id }, :method => :get,:class => 'btn btn-primary' %></div>
-                <div class = "col-md-3"><%= button_to "Remove property",{:controller => :properties,
+                <div class = "col-md-3 col-responsive"><%= button_to "Remove property",{:controller => :properties,
                  :action => 'destroy', :id => @property.id }, :method => :delete,:class =>'btn btn-danger' %></div> 
             <% end %>
         </div>

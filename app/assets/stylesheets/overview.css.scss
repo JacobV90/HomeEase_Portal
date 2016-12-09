@@ -40,11 +40,11 @@
 
 
 
-@import url('http://fonts.googleapis.com/css?family=Open+Sans:200,300');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:200,300');
 
 .background_image{
 	
-  background-image: image-url('AboutSkyline.jpg');
+  background-image: image-url('AboutSkyline1.jpg');
   min-height: 100vh;
   background-attachment: fixed;
   background-position: center;
@@ -62,7 +62,7 @@ a:link, a:visited {
 
 
 .block {
-	background-color:rgba(0,0,0,0.75);
+	background-color:rgba(0,0,0,0.55);
     height:auto;
   	padding-left:12px;
   	padding-right:12px;
@@ -73,8 +73,9 @@ a:link, a:visited {
   	margin-bottom:5%;
 }
 
-.block-sm {
-    height:180px;
+.block-outer{
+    margin-top:0%;
+    margin-bottom:0%;
 }
 
 .block-med {

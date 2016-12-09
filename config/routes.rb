@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   devise_for :users
   resources :users do
     delete 'remove', on: :member
+    
   end
   
   #pages users can visit without being signed in
@@ -21,11 +22,15 @@ Rails.application.routes.draw do
   get 'bank', to: 'profile#bank'
   get 'dashboard', to: 'profile#dashboard'
   get 'settings', to: 'profile#settings'
-  
+  get 'update', to: 'profile#update'
+  put 'profile_update', to: 'profile#'
+  post 'upload', to: 'profile#'
+  #post 'edit_profile', to: 'profile#dashboard'
   #used for firebase notifications - doesnt render ui
   post 'notifications', to: 'profile#notifications' 
-  
+
   resources :properties
   post 'create_property', to: 'properties#create'
   post 'upload', to: 'properties#'
+
 end

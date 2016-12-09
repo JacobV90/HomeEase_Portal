@@ -7,7 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 user = CreateAdminService.new.call
-puts 'CREATED ADMIN USER: ' << user.email
+
 
 example_property = user.properties.create(street: '666 Fluffy Bunny Way', city: 'TooKuhl4School', 
     state: "Iowa" , zipcode: 52240, price: 2200, bedrooms: 3,bathrooms: 1, amenities: "Selt and Com nets", 

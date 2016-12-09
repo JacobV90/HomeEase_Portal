@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161117064400) do
+ActiveRecord::Schema.define(version: 20161207044541) do
 
   create_table "properties", force: :cascade do |t|
     t.string   "street",                              default: "",   null: false
@@ -28,7 +28,8 @@ ActiveRecord::Schema.define(version: 20161117064400) do
     t.string   "image_file_name"
     t.string   "image_content_type"
     t.integer  "image_file_size"
-    t.datetime "image_updated_at"
+    t.datetime "image_updated_at",
+    t.picture  "picture",
     t.index ["user_id"], name: "index_properties_on_user_id"
   end
 
@@ -38,6 +39,7 @@ ActiveRecord::Schema.define(version: 20161117064400) do
     t.string  "last_name"
     t.string  "email"
     t.string  "phone_number"
+    t.string  "picture"
     t.index ["property_id"], name: "index_tenants_on_property_id"
   end
 
@@ -55,8 +57,13 @@ ActiveRecord::Schema.define(version: 20161117064400) do
     t.string   "first_name"
     t.string   "last_name"
     t.string   "phone_number"
+    t.string   "owner_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "business_name"
+    t.string   "business_address"
+    t.string   "business_phone_number"
+    t.string   "business_email"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

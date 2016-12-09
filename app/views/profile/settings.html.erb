@@ -4,12 +4,16 @@
     <hr>
     <div class = 'col-med-4 text-center'>
         <%= button_to "Delete Account", remove_user_path(current_user.id), :method => :delete,:class =>'btn btn-danger' %>
+        
+    </div>
+    <hr>
+    <div class = 'col-med-4 text-center'>
+        <%= button_to "Edit Account", update_path, :method => :get, :class => ' btn btn-success' %>
     </div>
    <hr>
-   <div class = 'col-med-4 text-center'>
-        PUT AN EDIT ACCOUNT BUTTON!
+   <div align = 'center'>
+  <iframe src="//giphy.com/embed/3oz8xALpV1X2BPo7cI" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="http://giphy.com/gifs/3oz8xALpV1X2BPo7cI"></a></p>
     </div>
-   <hr>
    <br>
 </div>
 <% end %>

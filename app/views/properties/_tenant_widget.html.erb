@@ -1,7 +1,7 @@
 
 <div class = "container">
         <div class="col-md-2">
-            <img src="http://placehold.it/380x500" alt="" class="img-rounded img-responsive" style="width:150px;height:200px;" />
+            <img src=<%= tenant.picture %> alt="" class="img-rounded img-responsive" style="width:150px;height:200px;" />
         </div>
         <div class="col-md-10">
             <h4>
@@ -10,7 +10,8 @@
                     <i class="glyphicon glyphicon-envelope"></i> <%= tenant.email %>
                     <br />
                     <i class="glyphicon glyphicon-earphone"></i> <%= tenant.phone_number %></p>
-            
+                    <button type="button" class="btn btn-success" onclick="approve_applicant(tenant.email)">Approve</button>
+                    <button type="button" class="btn btn-danger">Deny</button>
         </div>
 </div>
 
